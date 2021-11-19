@@ -8,12 +8,14 @@ $footer-animation-time: 0.3s;
     opacity: 0;
     transform: translateX(-160px);   
     transition: all 0.3s $general-transition $footer-animation-time;
+    transition-property: opacity, transform;
 }
 
 .screen__footer {
     opacity: 0;
     transform: translateY(50px);
     transition: all 0.3s $general-transition $footer-animation-time;
+    transition-property: opacity, transform;
 }
 
 .page-header__nav {
@@ -24,6 +26,7 @@ $footer-animation-time: 0.3s;
         width: 0;
         height: 0;
         transition: all $header-animation-time $social-transition;
+        transition-property: width, height;
     }
 
     & .js-menu-link.active::after {
@@ -35,7 +38,7 @@ $footer-animation-time: 0.3s;
 
 .page-header__toggler {
     opacity: 0;
-    transition: all $header-animation-time $social-transition;
+    transition: opacity $header-animation-time $social-transition;
 }
 
 body.loaded {
