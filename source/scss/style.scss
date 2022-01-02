@@ -22,8 +22,4 @@
 @import "blocks/social-block.scss";
 
 // Chapter exercises
-@import "exercises/ch1/task1.scss";
-@import "exercises/ch1/task2.scss";
-@import "exercises/ch1/task3.scss";
-
-@import "exercises/ch2/task1.scss";
+@import "./exercises/exercises.scss";
