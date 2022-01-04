@@ -5119,14 +5119,14 @@ body.loaded .page-header__toggler {
 }
 
 .social-block__toggler {
-  transition: color 0.5s ease-in-out;
+  transition: color 0.7s ease-in-out;
 }
 
 .slider__control:focus {
-  transition: color 0.5s ease-in-out;
+  transition: color 0.7s ease-in-out;
 }
 .slider__control:focus::before {
-  transition: border-color 0.5s ease-in-out;
+  transition: border-color 0.7s ease-in-out;
 }
 
 body.slide1-active.with-ui-coloring .page-header__menu a:hover, body.slide1-active.with-ui-coloring .page-header__menu a:focus, body.slide4-active.with-ui-coloring .page-header__menu a:hover, body.slide4-active.with-ui-coloring .page-header__menu a:focus {
