@@ -191,14 +191,14 @@
 
 // ex 4
 .social-block__toggler {
-    transition: color 0.5s ease-in-out;
+    transition: color 0.7s ease-in-out;
 }
 
 .slider__control:focus {
-    transition: color 0.5s ease-in-out;
+    transition: color 0.7s ease-in-out;
 
     &::before {
-        transition: border-color 0.5s ease-in-out;
+        transition: border-color 0.7s ease-in-out;
     }
 }
 
