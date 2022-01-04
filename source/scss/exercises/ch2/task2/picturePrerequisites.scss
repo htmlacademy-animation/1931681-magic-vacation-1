@@ -1,0 +1,58 @@
+.result__image picture {
+    position: relative;
+}
+
+.result__image img {
+    width: auto;
+    height: auto;
+
+    position: absolute;
+}
+
+#suitcase {
+    height: 49vh;
+    bottom: 15vh;
+    left: 50vw;
+    margin-left: calc(-30vh);
+    will-change: transform;
+
+    z-index: 3;
+}
+
+#greenLeaf {
+    height: 23vh !important;
+    bottom: 21vh;
+    left: 50vw;
+    margin-left: calc(-5vh);
+
+    opacity: 0;
+    z-index: 2;
+}
+
+#flamingo {
+    height: 33vh !important;
+    bottom: 17vh;
+    left: 50vw;
+    margin-left: calc(-32.5vh);
+
+    z-index: 4;
+}
+
+#blueLeaf1 {
+    height: 30vh !important;
+    bottom: 25vh;
+    left: 50vw;
+
+    opacity: 0;
+    z-index: 1;
+}
+
+#blueLeaf2 {
+    height: 30vh !important;
+    bottom: 15vh;
+    left: 50vw;
+    margin-left: calc(-45vh);   
+
+    opacity: 0;
+    z-index: 1;
+}
