@@ -11,6 +11,10 @@
 }
 
 #mysticalJourney {
+    @media (min-width: $stop-scaling) {
+        max-width: 1000px;
+    }
+
     & .text-animation-character {
         transform: translate3d(0, 150px, 0);
 
