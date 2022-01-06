@@ -12,6 +12,7 @@ import FullPageScroll from './modules/full-page-scroll';
 // chapter exercises
 import runChapter1Task2 from './exercises/ch1/task2';
 import runChapter2Task2 from './exercises/ch2/task2';
+import runChapter3Task1 from './exercises/ch3/task1';
 
 // init modules
 mobileHeight();
@@ -24,7 +25,6 @@ form();
 social();
 
 runChapter1Task2();
-// runChapter2Task2();
 
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();
