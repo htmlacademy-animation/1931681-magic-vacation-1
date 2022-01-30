@@ -2425,7 +2425,7 @@ img {
   }
 }
 .prizes__item--cases .prizes__icon {
-  width: 18.8rem;
+  width: 20.8rem;
 }
 @media (min-width: 2000px) {
   .prizes__item--cases .prizes__icon {
@@ -2482,7 +2482,7 @@ img {
     margin-right: 3.8rem;
   }
 }
-.prizes__icon img {
+.prizes__icon img, .prizes__icon object {
   display: block;
   width: 100%;
   height: auto;
@@ -5242,67 +5242,111 @@ body.slide3-active.with-ui-coloring .slider__control:focus::before {
   transform: translateY(5vh);
 }
 
-.prizes__list {
+.prizes__item--cases .prizes__icon {
+  width: 29.56rem;
+  margin-left: -8rem;
+}
+@media (min-width: 2000px) {
+  .prizes__item--cases .prizes__icon {
+    width: 297px;
+  }
+}
+@media (max-width: 1024px) and (orientation: portrait) {
+  .prizes__item--cases .prizes__icon {
+    margin-right: 1.3rem;
+    width: 14.51rem;
+  }
+}
+@media (max-width: 1024px) and (orientation: landscape) {
+  .prizes__item--cases .prizes__icon {
+    width: 13.5rem;
+  }
+}
+@media (max-width: 768px) and (orientation: landscape) {
+  .prizes__item--cases .prizes__icon {
+    width: 9.95rem;
+  }
+}
+
+.prizes__item--cases .prizes__desc, .prizes__item--codes .prizes__desc {
+  margin-top: 4.2rem;
+}
+@media (min-width: 2000px) {
+  .prizes__item--cases .prizes__desc, .prizes__item--codes .prizes__desc {
+    margin-top: 42px;
+  }
+}
+@media (max-width: 1024px) and (orientation: portrait) {
+  .prizes__item--cases .prizes__desc, .prizes__item--codes .prizes__desc {
+    margin-top: 0;
+    margin-bottom: -0.38rem;
+  }
+}
+@media (max-width: 1024px) and (orientation: landscape) {
+  .prizes__item--cases .prizes__desc, .prizes__item--codes .prizes__desc {
+    margin-top: 1.6rem;
+  }
+}
+
+.prizes__list_content {
+  position: relative;
+}
+
+@keyframes journeysItemPosition {
+  to {
+    left: 0;
+  }
+}
+.prizes__item--journeys-active {
+  position: absolute;
+  animation-name: journeysItemPosition;
+  animation-duration: 1s;
+  animation-delay: 3.4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  left: calc(50% - 26.2rem);
+}
+@media (min-width: 2000px) {
+  .prizes__item--journeys-active {
+    left: calc(50% - 47em);
+  }
+}
+@media (max-width: 1024px) and (orientation: portrait) {
+  .prizes__item--journeys-active {
+    left: 0;
+  }
+}
+@media (max-width: 1024px) and (orientation: landscape) {
+  .prizes__item--journeys-active {
+    left: calc(50% - 18.2rem);
+  }
+}
+
+.prizes-item--hidden {
   opacity: 0;
 }
 
-.awardsWrapper {
-  margin-left: 20vw;
-  display: flex;
-}
-
-@keyframes primaryAwardWidth {
-  from {
-    width: 100%;
-  }
-  to {
-    width: 33%;
-  }
-}
-.primaryAward {
-  animation-name: primaryAwardWidth;
-  animation-duration: 0.7s;
-  animation-delay: 3.3s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
-  height: 40.6vh;
-  width: 100%;
-}
-.primaryAward object {
-  width: 100%;
-  height: 100%;
-}
-
-@keyframes secondaryAwardWidth {
-  from {
-    width: 0;
-  }
-  to {
-    width: 33%;
-  }
-}
-@keyframes secondaryAwardOpacity {
-  from {
-    opacity: 0;
-  }
+@keyframes prizesItemOpacity {
   to {
     opacity: 1;
   }
 }
-.secondaryAward {
-  position: relative;
-  animation-name: secondaryAwardWidth, secondaryAwardOpacity;
-  animation-duration: 4s, 0.3s;
-  animation-delay: 0s, 4s;
-  animation-fill-mode: forwards, forwards;
-  animation-timing-function: step-end, ease-in-out;
-  height: 40.6vh;
-  width: 0;
+.prizes__item--cases {
+  animation-name: prizesItemOpacity;
+  animation-duration: 0.5s;
+  animation-delay: 3.8s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
   opacity: 0;
 }
-.secondaryAward object {
-  width: 100%;
-  height: 100%;
+
+.prizes__item--codes {
+  animation-name: prizesItemOpacity;
+  animation-duration: 0.5s;
+  animation-delay: 6.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  opacity: 0;
 }
 
 /*# sourceMappingURL=style.min.css.map*/
