@@ -1,18 +1,61 @@
-window.addEventListener('hashchange', animationStarter);
-window.addEventListener('load', animationStarter);
+window.addEventListener('hashchange', onHashChange);
+window.addEventListener('animationObjectLoad', onAnimationObjectLoad);
 
-function animationStarter() {
+const animationDescriptors = {
+    primaryAward: {
+        id: null,
+        delay: 0,
+        duration: 5500
+    },
+    secondaryAward: {
+        id: null,
+        delay: 3800,
+        duration: 1867
+    }
+};
+
+function startAnimationsWithTimers(animationName) {
     switch(document.location.hash) {
         case '#prizes':
-            const svg = document.getElementById('primaryAwardAnimation');
-            const animation = document.getElementById('primaryAwardAnimationStart');
-            if (svg && animation) {
-                animation.endElement();
-                svg.setCurrentTime(0);
-                animation.beginElement();
-            }
+            animationDescriptors[animationName].id = setTimeout(() => {
+                initAnimation(animationName);
+
+                animationDescriptors[animationName].id = null;                
+            }, animationDescriptors[animationName].delay);
+
             break;
         default:
-            break;
+            clearTimeout(animationDescriptors[animationName].id);
+            animationDescriptors[animationName].id = null;
+    }
+}
+
+function onAnimationObjectLoad(event) {
+    console.log('load')
+    const { animationName } = event.detail;
+
+    startAnimationsWithTimers(animationName);
+}
+
+function onHashChange() {
+    console.log('hashchange');
+    setTimeout(() => {
+        startAnimationsWithTimers('primaryAward');
+        startAnimationsWithTimers('secondaryAward');
+    }, 500);
+}
+
+function initAnimation(animationName) {
+    const objectWrapper = document.getElementById(animationName);
+    if (objectWrapper && objectWrapper.contentWindow) {
+        const svg = objectWrapper.contentDocument.getElementById('animation');
+        const animation = objectWrapper.contentDocument.getElementById('animationStart');
+
+        if (svg && animation) {
+            console.log('initing ' + animationName);
+            svg.setCurrentTime(0);
+            animation.endElement();
+            animation.beginElement();
+        }
     }
 }

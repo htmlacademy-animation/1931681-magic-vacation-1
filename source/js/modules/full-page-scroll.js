@@ -95,7 +95,6 @@ export default class FullPageScroll {
       }, this.PAGE_CHANGE_TRANSITION_TIME);
 
       this.screenElements[this.activeScreen].classList.add(`entering`);
-      console.log(...this.screenElements[this.activeScreen].classList)
     } else {
       this.screenElements[this.activeScreen].classList.remove(`screen--hidden`);  
       setTimeout(() => {
