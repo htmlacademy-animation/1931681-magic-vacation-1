@@ -12,8 +12,14 @@ export default () => {
         let targetEl = [].slice.call(results).filter(function (el) {
           return el.getAttribute(`id`) === target;
         });
+
         targetEl[0].classList.add(`screen--show`);
         targetEl[0].classList.remove(`screen--hidden`);
+
+        setTimeout(() => window.dispatchEvent(new CustomEvent(
+          'animationObjectLoad',
+          { detail: { animationName: showResultEls[i].getAttribute(`data-animation`) } }
+        )), 300);
       });
     }
 

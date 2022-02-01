@@ -64,11 +64,11 @@
 
     <!-- bird -->
     <g>
-      <animateTransform attributeName="transform" begin="animationStart.begin + 0.5s" end="animationStart.end" type="translate" dur="0.7s" values="-40, 70; 20, -20; 15, -15" repeatCount="1" additive="sum" />
-      <animateTransform attributeName="transform" begin="animationStart.begin + 0.5s" end="animationStart.end" type="rotate" dur="0.7s" values="-35, 284, 184; 0, 284, 184; -10, 284, 184" repeatCount="1" additive="sum" />
+      <animateTransform attributeName="transform" begin="animationStart.begin + 0.5s" end="animationStart.end" type="translate" dur="1s" values="-40, 70; 20, -20; 15, -15" repeatCount="1" additive="sum" />
+      <animateTransform attributeName="transform" begin="animationStart.begin + 0.5s" end="animationStart.end" type="rotate" dur="1s" values="-35, 284, 184; 0, 284, 184; -10, 284, 184" repeatCount="1" additive="sum" />
 
-      <animateTransform attributeName="transform" begin="animationStart.begin + 1.2s" end="animationStart.end" type="translate" dur="1.2s" values="15, -15; 5, -5; 20, -20; 15, -15" repeatCount="indefinite" additive="sum" />
-      <animateTransform attributeName="transform" begin="animationStart.begin + 1.2s" end="animationStart.end" type="rotate" dur="1.2s" values="-10, 284, 184; -30, 284, 184; 0, 284, 184; -10, 284, 184" repeatCount="indefinite" additive="sum" />
+      <animateTransform attributeName="transform" begin="animationStart.begin + 1.5s" end="animationStart.end" type="translate" dur="1.5s" values="15, -15; 5, -5; 20, -20; 15, -15" repeatCount="indefinite" additive="sum" />
+      <animateTransform attributeName="transform" begin="animationStart.begin + 1.5s" end="animationStart.end" type="rotate" dur="1.5s" values="-10, 284, 184; -30, 284, 184; 0, 284, 184; -10, 284, 184" repeatCount="indefinite" additive="sum" />
 
       <path d="M279.2,183.8A4.89,4.89,0,0,1,283,179h0l21.07-5.4c-7.78,14.84-19.18,15.07-20,15.07h0a4.9,4.9,0,0,1-4.85-4.9" fill="#fff">
         <animateTransform attributeName="transform" begin="animationStart.begin + 0.5s" end="animationStart.end" type="rotate" dur="0.15s" values="0, 284, 184; -150, 284, 184" repeatCount="indefinite" />  
