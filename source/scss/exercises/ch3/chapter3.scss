@@ -23,7 +23,7 @@
 
 .prizes__item--cases .prizes__icon {
   width: 29.56rem;
-  margin-left: -8rem;
+  margin-left: -3rem;
 
   @media (min-width: $stop-scaling) {
     width: 297px;
@@ -115,6 +115,13 @@
   animation-timing-function: linear;
 
   opacity: 0;
+  
+}
+
+@keyframes prizesItemCodesIconMargin {
+  to {
+    margin-left: 0;
+  }
 }
 
 .prizes__item--codes {
@@ -125,4 +132,14 @@
   animation-timing-function: linear;
 
   opacity: 0;
+
+  & .prizes__icon {
+    margin-left: 3rem;
+
+    animation-name: prizesItemCodesIconMargin;
+    animation-duration: 0.5s;
+    animation-delay: 6.2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+  }
 }

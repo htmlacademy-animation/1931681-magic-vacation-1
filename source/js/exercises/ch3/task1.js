@@ -4,13 +4,15 @@ window.addEventListener('animationObjectLoad', onAnimationObjectLoad);
 const animationDescriptors = {
     primaryAward: {
         id: null,
-        delay: 0,
-        duration: 5500
+        delay: 0
     },
     secondaryAward: {
         id: null,
-        delay: 3800,
-        duration: 1867
+        delay: 3800
+    },
+    additionalAward: {
+        id: null,
+        delay: 6200
     }
 };
 
@@ -31,17 +33,16 @@ function startAnimationsWithTimers(animationName) {
 }
 
 function onAnimationObjectLoad(event) {
-    console.log('load')
     const { animationName } = event.detail;
 
     startAnimationsWithTimers(animationName);
 }
 
 function onHashChange() {
-    console.log('hashchange');
     setTimeout(() => {
         startAnimationsWithTimers('primaryAward');
         startAnimationsWithTimers('secondaryAward');
+        startAnimationsWithTimers('additionalAward');
     }, 500);
 }
 
@@ -52,7 +53,6 @@ function initAnimation(animationName) {
         const animation = objectWrapper.contentDocument.getElementById('animationStart');
 
         if (svg && animation) {
-            console.log('initing ' + animationName);
             svg.setCurrentTime(0);
             animation.endElement();
             animation.beginElement();
