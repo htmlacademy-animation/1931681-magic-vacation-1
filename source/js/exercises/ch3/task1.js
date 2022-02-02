@@ -13,12 +13,25 @@ const animationDescriptors = {
     additionalAward: {
         id: null,
         delay: 6200
+    },
+    victory: {
+        id: null,
+        delay: 0
+    },
+    victory2: {
+        id: null,
+        delay: 0
+    },
+    loss: {
+        id: null,
+        delay: 0
     }
 };
 
 function startAnimationsWithTimers(animationName) {
     switch(document.location.hash) {
         case '#prizes':
+        case '#game':
             animationDescriptors[animationName].id = setTimeout(() => {
                 initAnimation(animationName);
 
@@ -48,7 +61,7 @@ function onHashChange() {
 
 function initAnimation(animationName) {
     const objectWrapper = document.getElementById(animationName);
-    if (objectWrapper && objectWrapper.contentWindow) {
+    if (objectWrapper && objectWrapper.contentDocument) {
         const svg = objectWrapper.contentDocument.getElementById('animation');
         const animation = objectWrapper.contentDocument.getElementById('animationStart');
 
