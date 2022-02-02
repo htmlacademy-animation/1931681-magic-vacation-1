@@ -147,3 +147,9 @@
 .game__buttons {
   display: block;
 }
+
+#result .result__image img,
+#result3 .result__image img {
+    width: 100%;
+    height: 100%;
+}
