@@ -336,9 +336,33 @@
           </div>
           <!-- временные кнопки для показа результата -->
           <div class="game__buttons">
-            <button class="game__button btn js-show-result" type="button" data-target="result" data-animation="victory">Положительный результат</button>
-            <button class="game__button btn js-show-result" type="button" data-target="result2" data-animation="victory2">Положительный результат - 2</button>
-            <button class="game__button btn js-show-result" type="button" data-target="result3" data-animation="loss">Отрицательный результат</button>
+            <button
+              class="game__button btn js-show-result"
+              type="button"
+              data-target="result"
+              data-text-animation="victory"
+              data-content-animation="victoryScreen"
+            >
+              Положительный результат
+            </button>
+
+            <button
+              class="game__button btn js-show-result"
+              type="button"
+              data-target="result2"
+              data-text-animation="victory2"
+            >
+              Положительный результат - 2
+            </button>
+
+            <button
+              class="game__button btn js-show-result"
+              type="button"
+              data-target="result3"
+              data-text-animation="loss"
+            >
+              Отрицательный результат
+            </button>
           </div>
         </div>
       </div>
@@ -348,10 +372,7 @@
       <div class="screen__wrapper">
         <div class="result result--trip">
           <div class="result__image">
-            <picture>
-              <source srcset="img/result1-mob.png 1x, img/result1-mob@2x.png 2x" media="(max-width: 768px) and (orientation: portrait)">
-              <img src="img/result1.png" srcset="img/result1@2x.png 2x" alt="">
-            </picture>
+            <canvas id="victoryScreenCanvas">Обновите браузер</canvas>
           </div>
           <h2 class="result__title">
             <span class="visually-hidden">ПОбеда!</span>

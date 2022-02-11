@@ -13,7 +13,7 @@ import FullPageScroll from './modules/full-page-scroll';
 import runChapter1Task2 from './exercises/ch1/task2';
 import runChapter2Task2 from './exercises/ch2/task2';
 import runChapter3Task1 from './exercises/ch3/task1';
-import runChapter4Task1 from './exercises/ch4/task1';
+import runChapter4Task1 from './exercises/ch4/chapter4';
 
 // init modules
 mobileHeight();

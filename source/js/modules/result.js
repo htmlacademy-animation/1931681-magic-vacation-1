@@ -18,8 +18,16 @@ export default () => {
 
         setTimeout(() => window.dispatchEvent(new CustomEvent(
           'animationObjectLoad',
-          { detail: { animationName: showResultEls[i].getAttribute(`data-animation`) } }
+          { detail: { animationName: showResultEls[i].getAttribute(`data-text-animation`) } }
         )), 300);
+
+        const contentAnimation = showResultEls[i].getAttribute(`data-content-animation`);
+        if (contentAnimation) {
+          window.dispatchEvent(new CustomEvent(
+            'contentAnimation',
+            { detail: { animationName: contentAnimation } }
+          ))
+        }
       });
     }
 
