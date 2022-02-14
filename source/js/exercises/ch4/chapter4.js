@@ -1,6 +1,7 @@
 import task1 from './gameTimer/gameTimer';
 import task2 from './prizesCounter/prizesCounter';
 import { startVictoryScreenAnimation } from './victoryScreen/victoryScreen';
+import { startLossScreenAnimation } from './lossScreen/lossScreen';
 
 window.stopTimer = task1();
 task2();
@@ -11,6 +12,9 @@ window.addEventListener('contentAnimation', event => {
     switch(animationName) {
         case 'victoryScreen':
             initAnimation(startVictoryScreenAnimation);
+            break;
+        case 'lossScreen':
+            initAnimation(startLossScreenAnimation);
             break;
         default:
             break;
