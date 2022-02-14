@@ -8,7 +8,6 @@ export default function initTimer() {
     let timerStopper;
 
     function startTimer() {
-        console.log('starting')
         timer = Date.now();
         timerStopper = null;
 
