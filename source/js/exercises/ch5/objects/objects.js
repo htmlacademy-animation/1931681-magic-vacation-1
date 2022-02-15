@@ -1,3 +1,4 @@
+import hueFragmentShader from '../shaders/hueFragmentShader.frag';
 import {
     TITLE_SCREEN_ID,
     STORY_SCREEN_SLIDE1_ID,
@@ -17,7 +18,8 @@ const objects = [
     },
     {
         id: STORY_SCREEN_SLIDE2_ID,
-        texture: 'img/exercises/chapter5/story-slide2.png'
+        texture: 'img/exercises/chapter5/story-slide2.png',
+        fragment: hueFragmentShader
     },
     {
         id: STORY_SCREEN_SLIDE3_ID,
