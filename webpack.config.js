@@ -83,6 +83,14 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /(\.vert|\.frag)$/,
+        use: [
+          {
+            loader: 'raw-loader'
+          }
+        ]
       }
     ]
   },

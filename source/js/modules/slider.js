@@ -27,7 +27,6 @@ export default function slider() {
         },
         on: {
           slideChange: () => {
-            console.log('slideChange')
             let backgroundImage = '';
             let bodyClass = '';
             switch(storySlider.activeIndex) {
@@ -64,6 +63,8 @@ export default function slider() {
               document.body.classList.add(bodyClass);
               prevBodyClass = bodyClass;
             }
+
+            window.dispatchEvent(new CustomEvent('slide-change'));
           },
           resize: () => {
             storySlider.update();
@@ -119,6 +120,8 @@ export default function slider() {
               document.body.classList.add(bodyClass);
               prevBodyClass = bodyClass;
             }
+
+            window.dispatchEvent(new CustomEvent('slide-change'));
           },
           resize: () => {
             storySlider.update();

@@ -4,23 +4,16 @@ import { objects as objectsDescriptors } from './objects/objects';
 
 function makeRenderedObjects(scene, object) {
     var geometry = new THREE.PlaneGeometry(2, 2);
-    var material = new THREE.RawShaderMaterial({
-        uniforms: {
-            map: { type: 't', value: object.texture },
-            opacity: { type: 'float', value: 0.5 },
-            ...object.uniforms
-        },
-        vertexShader: object.vertexShader,
-        fragmentShader: object.fragmentShader,
-        blending: THREE.NormalBlending,
-        depthTest: false,
+    var material = new THREE.MeshBasicMaterial({
+        map: object.texture,
+        opacity: 1,
         transparent: true
     });
     var plane = new THREE.Mesh(geometry, material);
     scene.add(plane);
 
     function changeOpacity(opacity) {
-        material.uniforms.opacity.value = opacity;
+        material.opacity = opacity;
     }
 
     return { changeOpacity };
