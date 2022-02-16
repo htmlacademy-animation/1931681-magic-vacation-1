@@ -19,7 +19,10 @@ const objects = [
     {
         id: STORY_SCREEN_SLIDE2_ID,
         texture: 'img/exercises/chapter5/story-slide2.png',
-        fragment: hueFragmentShader
+        fragment: hueFragmentShader,
+        uniforms: {
+            rotation: { type: 'float', value: 345.0 }
+        }
     },
     {
         id: STORY_SCREEN_SLIDE3_ID,
