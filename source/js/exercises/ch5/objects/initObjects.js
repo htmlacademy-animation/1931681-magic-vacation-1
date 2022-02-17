@@ -19,7 +19,8 @@ async function initObjects() {
                 objects[id] = {
                     texture,
                     vertexShader: vertex || vertexShader,
-                    fragmentShader: fragment || fragmentShader
+                    fragmentShader: fragment || fragmentShader,
+                    uniforms: uniforms || {}
                 };
 
                 resolve();

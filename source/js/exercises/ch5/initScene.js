@@ -8,6 +8,7 @@ function makeRenderedObjects(scene, object) {
         uniforms: {
             map: { type: 't', value: object.texture },
             opacity: { type: 'float', value: 0.5 },
+            ...object.uniforms
         },
         vertexShader: object.vertexShader,
         fragmentShader: object.fragmentShader,
