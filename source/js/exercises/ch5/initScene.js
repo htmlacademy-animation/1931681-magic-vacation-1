@@ -8,6 +8,7 @@ function makeRenderedObjects(scene, object) {
         uniforms: {
             map: { type: 't', value: object.texture },
             opacity: { type: 'float', value: 0.5 },
+            bubblePosition: { type: 'vec2', value: [ 0, 0 ] },
             ...object.uniforms
         },
         vertexShader: object.vertexShader,
