@@ -48,8 +48,16 @@ const objects = [
         fragment: hueFragmentShader,
         uniforms: {
             hueMatrix: { type: 'mat4', value: getHueMatrix(345) },
-            bubblePosition: { type: 'vec2', value: [ 400.0, 350.0 ] },
-            bubbleRadius: { type: 'float', value: 50.0 }
+            bubblePosition: { type: 'mat3', value: [
+                400.0, 350.0, 0.0,
+                790.0, 850.0, 0.0,
+                600.0, 180.0, 0.0
+            ]},
+            bubbleRadius: { type: 'vec3', value: [
+                50.0,
+                40.0,
+                35.0
+            ]}
         }
     },
     {
