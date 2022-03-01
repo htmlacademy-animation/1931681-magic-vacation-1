@@ -3,6 +3,12 @@ import * as THREE from 'three';
 import { objects as objectsDescriptors } from './objects/objects';
 
 function makeRenderedObjects(scene, object) {
+    const animated = !!object.animations;
+
+    let isAnimationPlaying = false;
+    let animationStart;
+    let renderCallback;
+
     var geometry = new THREE.PlaneGeometry(2, 2);
     var material = new THREE.RawShaderMaterial({
         uniforms: {
@@ -17,6 +23,7 @@ function makeRenderedObjects(scene, object) {
         depthTest: false,
         transparent: true
     });
+
     var plane = new THREE.Mesh(geometry, material);
     scene.add(plane);
 
@@ -24,7 +31,45 @@ function makeRenderedObjects(scene, object) {
         material.uniforms.opacity.value = opacity;
     }
 
-    return { changeOpacity };
+    function animationTick() {
+        const time = Date.now() - animationStart;
+
+        object.animations.forEach(animation => {
+            material.uniforms[animation.id].value = animation.getValue(time);
+        });
+
+        renderCallback();
+
+        if (isAnimationPlaying) {
+            window.requestAnimationFrame(() => animationTick());
+        }
+    }
+
+    if (object.animations) {
+        window.animationTick = animationTick;
+        window.changeOpacity = changeOpacity;
+    }
+    
+
+    function startAnimation(renderC) {
+        if (animated) {
+            animationStart = Date.now();
+            isAnimationPlaying = true;
+            renderCallback = renderC;
+            animationTick();
+        }
+    }
+
+    function stopAnimation() {
+        if (animated) {
+            isAnimationPlaying = false;
+        }
+    }
+
+    return {
+        changeOpacity,
+        startAnimation, stopAnimation
+    };
 }
 
 function initScene(objects) {
@@ -50,10 +95,14 @@ function initScene(objects) {
 
     function render(visibleObject) {
         Object.keys(renderedObjects).forEach(object => {
+            const renderedObject = renderedObjects[object];
+
             if (object === visibleObject) {
-                renderedObjects[object].changeOpacity(1);
+                renderedObject.changeOpacity(1);
+                renderedObject.startAnimation(() => renderer.render(scene, camera));
             } else {
-                renderedObjects[object].changeOpacity(0);
+                renderedObject.changeOpacity(0);
+                renderedObject.stopAnimation();
             }
         });
 

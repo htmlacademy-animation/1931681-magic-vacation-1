@@ -11,7 +11,7 @@ async function initObjects() {
 
     for (let i = 0; i !== objectsDescriptors.length; i++) {
         const {
-            id, texture, vertex, fragment, uniforms
+            id, texture, vertex, fragment, uniforms, animations
         } = objectsDescriptors[i];
 
         await new Promise(resolve =>
@@ -20,7 +20,8 @@ async function initObjects() {
                     texture,
                     vertexShader: vertex || vertexShader,
                     fragmentShader: fragment || fragmentShader,
-                    uniforms: uniforms || {}
+                    uniforms: uniforms || {},
+                    animations: animations
                 };
 
                 resolve();
