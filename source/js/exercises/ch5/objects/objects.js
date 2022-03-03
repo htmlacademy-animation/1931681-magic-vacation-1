@@ -33,6 +33,22 @@ function getHueMatrix(rotation) {
     ];
 }
 
+const FIRST_BUBBLE_X_POS = window.innerWidth * 0.34;
+const SECOND_BUBBLE_X_POS = window.innerWidth * 0.21;
+const THIRD_BUBBLE_X_POS = window.innerWidth * 0.41;
+
+const FIRST_BUBBLE_MAX_SHIFT = 75;
+const SECOND_BUBBLE_MAX_SHIFT = 45;
+const THIRD_BUBBLE_MAX_SHIFT = 90;
+
+const FIRST_BUBBLE_RADIUS = 55.0;
+const SECOND_BUBBLE_RADIUS = 40.0;
+const THIRD_BUBBLE_RADIUS = 35.0;
+
+const FIRST_BUBBLE_DELAY = 0;
+const SECOND_BUBBLE_DELAY = 700;
+const THIRD_BUBBLE_DELAY = 1000;
+
 function getKeyframes(keyframes, time) {
     const pastKeyframes = keyframes.filter(
         keyframe => keyframe.time <= time
@@ -43,6 +59,22 @@ function getKeyframes(keyframes, time) {
     const toKeyframe = futureKeyframes[0];
 
     return [ fromKeyframe, toKeyframe ];
+}
+
+const radFactor = Math.PI / 180.0;
+
+function getBubbleXShift(x) {
+    const xRad = radFactor * x;
+
+    return (Math.exp(-0.001 * x) * Math.cos(xRad));
+}
+
+function getBubbleYPosition(delay, time, bubbleRadius) {
+    if (time <= delay) {
+        return -bubbleRadius;
+    }
+
+    return time - delay;
 }
 
 const objects = [
@@ -62,17 +94,40 @@ const objects = [
             // hueMatrix: { type: 'mat4', value: getHueMatrix(345) },
             hueMatrix: { type: 'mat4', value: getHueMatrix(0) },
             bubblePosition: { type: 'mat3', value: [
-                400.0, 350.0, 0.0,
-                790.0, 850.0, 0.0,
+                500.0, 350.0, 0.0,
+                300.0, 200.0, 0.0,
                 600.0, 180.0, 0.0
             ]},
             bubbleRadius: { type: 'vec3', value: [
-                50.0,
-                40.0,
-                35.0
+                FIRST_BUBBLE_RADIUS,
+                SECOND_BUBBLE_RADIUS,
+                THIRD_BUBBLE_RADIUS
             ]}
         },
         animations: [
+            {
+                id: 'bubblePosition',
+                keyframes: [],
+                getValue: function getValue(time) {
+                    const delayedXTime = time / 2.5;
+                    const delayedYTime = time / 1.7;
+                    
+                    const firstBubbleXPos = FIRST_BUBBLE_X_POS + FIRST_BUBBLE_MAX_SHIFT * getBubbleXShift(delayedXTime);
+                    const secondBubbleXPos = SECOND_BUBBLE_X_POS + SECOND_BUBBLE_MAX_SHIFT * getBubbleXShift(delayedXTime);
+                    const thirdBubbleXPos = THIRD_BUBBLE_X_POS + THIRD_BUBBLE_MAX_SHIFT * getBubbleXShift(delayedXTime);
+
+                    const firstBubbleYPos = getBubbleYPosition(FIRST_BUBBLE_DELAY, delayedYTime, FIRST_BUBBLE_RADIUS);
+                    const secondBubbleYPos = getBubbleYPosition(SECOND_BUBBLE_DELAY, delayedYTime, SECOND_BUBBLE_RADIUS);
+                    const thirdBubbleYPos = getBubbleYPosition(THIRD_BUBBLE_DELAY, delayedYTime, THIRD_BUBBLE_RADIUS);
+
+                    return [
+                        firstBubbleXPos, firstBubbleYPos, 0.0,
+                        secondBubbleXPos, secondBubbleYPos, 0.0,
+                        thirdBubbleXPos, thirdBubbleYPos, 0.0
+                    ];
+                }
+            },
+
             {
                 id: 'hueMatrix',
                 keyframes: [
