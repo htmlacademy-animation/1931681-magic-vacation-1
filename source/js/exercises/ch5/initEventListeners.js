@@ -8,13 +8,13 @@ import {
 
 // using hashchange event instead of screenChanged
 // (its easier to render plane for initial page)
-function initEventListeners(renderScene) {
-    function tryToRenderPlane() {
+function initEventListeners(renderer, scenes, animation) {
+    function tryToRenderScene() {
         const hash = window.location.hash;
-        let objectId;
+        let sceneId;
 
         if (hash === '#top') {
-            objectId = TITLE_SCREEN_ID;
+            sceneId = TITLE_SCREEN_ID;
         } else if (hash === '#story') {
             const slideActiveClass = [...document.body.classList].find(
                 styleClass => styleClass.match(/slide\d-active/)
@@ -22,31 +22,35 @@ function initEventListeners(renderScene) {
 
             switch (slideActiveClass) {
                 case 'slide1-active':
-                    objectId = STORY_SCREEN_SLIDE1_ID;
+                    sceneId = STORY_SCREEN_SLIDE1_ID;
                     break;
                 case 'slide2-active':
-                    objectId = STORY_SCREEN_SLIDE2_ID;
+                    sceneId = STORY_SCREEN_SLIDE2_ID;
                     break;
                 case 'slide3-active':
-                    objectId = STORY_SCREEN_SLIDE3_ID;
+                    sceneId = STORY_SCREEN_SLIDE3_ID;
                     break;
                 case 'slide4-active':
-                    objectId = STORY_SCREEN_SLIDE4_ID;
+                    sceneId = STORY_SCREEN_SLIDE4_ID;
                     break;
                 default:
                     break;
             }
         }
+        const scene = scenes[sceneId];
+        if (scene) {
+            renderer.redrawScene(scene(0));
 
-        if (objectId) {
-            renderScene(objectId);
+            animation.restartAnimation(time => 
+                renderer.renderScene(scene(time))
+            );            
         }
     }
 
-    window.addEventListener('hashchange', tryToRenderPlane);
-    window.addEventListener('slide-change', tryToRenderPlane);
+    window.addEventListener('hashchange', tryToRenderScene);
+    window.addEventListener('slide-change', tryToRenderScene);
 
-    tryToRenderPlane();
+    tryToRenderScene();
 }
 
 export { initEventListeners };
