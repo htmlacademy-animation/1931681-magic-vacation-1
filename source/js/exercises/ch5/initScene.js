@@ -1,84 +1,33 @@
 import * as THREE from 'three';
 
-import { objects as objectsDescriptors } from './objects/objects';
-
-function makeRenderedObjects(scene, object) {
-    const animated = !!object.animations;
-
-    let isAnimationPlaying = false;
-    let animationStart;
-    let renderCallback;
-
-    var geometry = new THREE.PlaneGeometry(2, 2);
-    var material = new THREE.RawShaderMaterial({
-        uniforms: {
-            map: { type: 't', value: object.texture },
-            opacity: { type: 'float', value: 0.5 },
-            bubblePosition: { type: 'vec2', value: [ 0, 0 ] },
-            ...object.uniforms
-        },
-        vertexShader: object.vertexShader,
-        fragmentShader: object.fragmentShader,
-        blending: THREE.NormalBlending,
-        depthTest: false,
-        transparent: true
-    });
-
-    var plane = new THREE.Mesh(geometry, material);
-    scene.add(plane);
-
-    function changeOpacity(opacity) {
-        material.uniforms.opacity.value = opacity;
-    }
-
-    function animationTick() {
-        const time = Date.now() - animationStart;
-
-        object.animations.forEach(animation => {
-            material.uniforms[animation.id].value = animation.getValue(time);
-        });
-
-        renderCallback();
-
-        if (isAnimationPlaying) {
-            window.requestAnimationFrame(() => animationTick());
-        }
-    }
-
-    if (object.animations) {
-        window.animationTick = animationTick;
-        window.changeOpacity = changeOpacity;
-    }
-    
-
-    function startAnimation(renderC) {
-        if (animated) {
-            animationStart = Date.now();
-            isAnimationPlaying = true;
-            renderCallback = renderC;
-            animationTick();
-        }
-    }
-
-    function stopAnimation() {
-        if (animated) {
-            isAnimationPlaying = false;
-        }
-    }
-
-    return {
-        changeOpacity,
-        startAnimation, stopAnimation
-    };
-}
-
-function initScene(objects) {
+function initScene() {
     const canvasContainer = document.getElementById('threeJSCanvasContainer');
 
     const scene = new THREE.Scene();
 
-    const camera = new THREE.OrthographicCamera( - 1, 1, 1, - 1, 0, 1 );
-    camera.position.z = 1;
+    const directionalLight = new THREE.DirectionalLight(0xFFFFFF, 0.84);
+    directionalLight.target.position.set(1, 0, 0);
+
+    const pointLight1 = new THREE.PointLight(0xF6F2FF, 0.6, 975, 2);
+    pointLight1.position.set(-785, -350, -710);
+
+    const pointLight2 = new THREE.PointLight(0xF5FEFF, 0.95, 975, 2);
+    pointLight2.position.set(730, 800, -985);
+
+    const lightGroup = new THREE.Group();
+    lightGroup.add(directionalLight);
+    lightGroup.add(pointLight1);
+    lightGroup.add(pointLight2);
+    scene.add(lightGroup);
+
+    // const camera = new THREE.OrthographicCamera( - 1, 1, 1, - 1, 0, 1 );
+    const camera = new THREE.PerspectiveCamera(
+        35,
+        window.innerWidth / window.innerHeight,
+        1,
+        750
+    );
+    camera.position.z = 750;
 
     const renderer = new THREE.WebGLRenderer({
         alpha: true
@@ -88,28 +37,20 @@ function initScene(objects) {
     renderer.setSize(window.innerWidth, window.innerHeight);
     canvasContainer.appendChild(renderer.domElement);
 
-    const renderedObjects = objectsDescriptors.reduce((acc, object) => ({
-        ...acc,
-        [object.id]: makeRenderedObjects(scene, objects[object.id])
-    }), {});
-
-    function render(visibleObject) {
-        Object.keys(renderedObjects).forEach(object => {
-            const renderedObject = renderedObjects[object];
-
-            if (object === visibleObject) {
-                renderedObject.changeOpacity(1);
-                renderedObject.startAnimation(() => renderer.render(scene, camera));
-            } else {
-                renderedObject.changeOpacity(0);
-                renderedObject.stopAnimation();
-            }
-        });
-
+    function renderScene() {
         renderer.render(scene, camera);
     }
 
-    return render;
+    function redrawScene(object) {
+        while(scene.children.length > 0){ 
+            scene.remove(scene.children[0]); 
+        }
+
+        scene.add(lightGroup);
+        scene.add(object);
+    }
+
+    return { renderScene, redrawScene };
 }
 
 export { initScene };

@@ -3,7 +3,6 @@ precision mediump float;
 uniform sampler2D map;
 
 uniform mat4 hueMatrix;
-uniform float opacity;
 
 uniform mat3 bubblePosition;
 uniform vec3 bubbleRadius;
@@ -80,5 +79,5 @@ void main() {
     vec4 secondBubble = checkBubble(firstBubble, secondBubblePosition, secondtBubbleRadius);
     vec4 finalTexel = checkBubble(secondBubble, thirdBubblePosition, thirdBubbleRadius);
 
-    gl_FragColor = finalTexel * hueMatrix * opacity;
+    gl_FragColor = finalTexel * hueMatrix;
 }
