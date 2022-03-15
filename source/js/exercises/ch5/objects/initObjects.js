@@ -9,7 +9,7 @@ import {
 import { titleScreen } from './titleScreen';
 import { storyScreenSlide1 } from './storyScreenSlide1';
 import { storyScreenSlide2 } from './storyScreenSlide2/storyScreenSlide2';
-import { storyScreenSlide3 } from './storyScreenSlide3';
+import { storyScreenSlide3 } from './storyScreenSlide3/storyScreenSlide3';
 import { storyScreenSlide4 } from './storyScreenSlide4';
 
 async function initObjects() {
