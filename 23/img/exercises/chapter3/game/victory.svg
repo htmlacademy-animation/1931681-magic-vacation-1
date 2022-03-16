@@ -1,0 +1,363 @@
+<svg id="animation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 120">
+    <animate id="animationStart" begin="indefinite" />
+
+    <g>
+        <animateTransform attributeName="transform" begin="animationStart.begin" end="animationStart.end" type="scale" dur="0.5s" values="1.05, 1.05; 1, 1" additive="sum" />
+        <animateTransform attributeName="transform" begin="animationStart.begin" end="animationStart.end" type="translate" dur="0.5s" values="-16, -3; 0, 0" additive="sum" />
+        
+        <!-- П -->
+        <path
+            d="M 62 24.44 H 16 V 92 H 2.6 V 8 H 62"
+            transform="translate(-2.1 -1.5)"
+            fill="none"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-dasharray="271"
+            stroke-dashoffset="271"
+        >
+            <animate
+                begin="animationStart.begin"
+                end="animationStart.end"
+                attributeName="stroke-dashoffset"
+                from="271"
+                to="0"
+                dur="0.5s"
+                fill="freeze"
+            />
+        </path>
+
+        <path
+            d="M 61.52 8 H 75 V 92 H 61.52 V 24.44"
+            transform="translate(-2.1 -1.5)"
+            fill="none"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-dasharray="179"
+            stroke-dashoffset="179"
+        >
+            <animate
+                begin="animationStart.begin"
+                end="animationStart.end"
+                attributeName="stroke-dashoffset"
+                from="179"
+                to="0"
+                dur="0.5s"
+                fill="freeze"
+            />
+        </path>
+        <!-- П -->
+        
+
+        <!-- О -->
+        <path
+            d="M148.76,5.6c32.88,0,59.52,19.92,59.52,44.4s-26.64,44.4-59.52,44.4S89.24,74.48,89.24,50,115.88,5.6,148.76,5.6"
+            transform="translate(-2.1 -1.5)"
+            fill="none"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-dasharray="329"
+            stroke-dashoffset="329"
+        >
+            <animate
+                begin="animationStart.begin"
+                end="animationStart.end"
+                attributeName="stroke-dashoffset"
+                from="329"
+                to="0"
+                dur="0.5s"
+                fill="freeze"
+            />
+        </path>
+
+        <path
+            d="M 148.76 77.72 C 173.24 77.72 193.16 65.36 193.16 50 S 173.24 22.16 148.76 22.16 C 124 22.16 104 34.52 104 50 S 124 77.72 148.76 77.72Z"
+            transform="translate(-2.1 -1.5)"
+            fill="none"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-dasharray="231"
+            stroke-dashoffset="231"
+        >
+            <animate
+                begin="animationStart.begin"
+                end="animationStart.end"
+                attributeName="stroke-dashoffset"
+                from="231"
+                to="0"
+                dur="0.5s"
+                fill="freeze"
+            />
+        </path>
+        <!-- О -->
+
+        <!-- Б -->
+        <path
+            d="M 287.36 8 V 24.44 H 236 v 14.4 h 25.32 c 25.44 0 34 11.16 34 26.52 c 0 15.6 -8.52 26.64 -34 26.64"
+            transform="translate(-2.1 -1.5)"
+            fill="none"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-dasharray="207"
+            stroke-dashoffset="207"
+        >
+            <animate
+                begin="animationStart.begin"
+                end="animationStart.end"
+                attributeName="stroke-dashoffset"
+                from="207"
+                to="0"
+                dur="0.5s"
+                fill="freeze"
+            />
+        </path>
+
+        <path
+            d="M 261.32 92 H 222.56 V 8 H 287.36"
+            transform="translate(-2.1 -1.5)"
+            fill="none"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-dasharray="188"
+            stroke-dashoffset="188"
+        >
+            <animate
+                begin="animationStart.begin"
+                end="animationStart.end"
+                attributeName="stroke-dashoffset"
+                from="188"
+                to="0"
+                dur="0.5s"
+                fill="freeze"
+            />
+        </path>
+
+        <path
+            d="M256.88,76.52c15.12,0,23.52-2,23.52-11.52S272,54.44,256.88,54.44H236V76.52h20.88Z"
+            transform="translate(-2.1 -1.5)"
+            fill="none"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-dasharray="123"
+            stroke-dashoffset="123"
+        >
+            <animate
+                begin="animationStart.begin"
+                end="animationStart.end"
+                attributeName="stroke-dashoffset"
+                from="123"
+                to="0"
+                dur="0.5s"
+                fill="freeze"
+            />
+        </path>
+        <!-- Б -->
+
+        <!-- Е -->
+        <path
+            d="M 371.47 8 V 24.44 H 320.84 V 41.6 H 354.44 V 58 H 320.84 V 75.56 H 371.48 V 92"
+            transform="translate(-2.1 -1.5)"
+            fill="none"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-dasharray="253"
+            stroke-dashoffset="253"
+        >
+            <animate
+                begin="animationStart.begin"
+                end="animationStart.end"
+                attributeName="stroke-dashoffset"
+                from="253"
+                to="0"
+                dur="0.5s"
+                fill="freeze"
+            />
+        </path>
+
+        <path
+            d="M 371.47 92 H 307.4 V 8 H 371.48"
+            transform="translate(-2.1 -1.5)"
+            fill="none"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-dasharray="213"
+            stroke-dashoffset="213"
+        >
+            <animate
+                begin="animationStart.begin"
+                end="animationStart.end"
+                attributeName="stroke-dashoffset"
+                from="213"
+                to="0"
+                dur="0.5s"
+                fill="freeze"
+            />
+        </path>
+        <!-- Е -->
+
+        <!-- Д -->
+        <path
+            d="M 382.39 110.24 V 75.56 H 389.83 C 394.39 70.88 397.63 57.2 398.59 19.56 L 399 8 H 447.6"
+            transform="translate(-2.1 -1.5)"
+            fill="none"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-dasharray="160"
+            stroke-dashoffset="160"
+        >
+            <animate
+                begin="animationStart.begin"
+                end="animationStart.end"
+                attributeName="stroke-dashoffset"
+                from="160"
+                to="0"
+                dur="0.5s"
+                fill="freeze"
+            />
+        </path>
+
+        <path
+            d="M 447.6 8 V 75.56 H 457.6 V 110.24 H 442.87 V 92 H 397 V 110.24 H 382.39"
+            transform="translate(-2.1 -1.5)"
+            fill="none"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-dasharray="224"
+            stroke-dashoffset="224"
+        >
+            <animate
+                begin="animationStart.begin"
+                end="animationStart.end"
+                attributeName="stroke-dashoffset"
+                from="224"
+                to="0"
+                dur="0.5s"
+                fill="freeze"
+            />
+        </path>
+
+        <path
+            d="M 434.11 75.56 V 24.44 H 411.55 V 27.56 C 411.07 50 408.31 65.24 404.35 75.56 H 434.11 Z"
+            transform="translate(-2.1 -1.5)"
+            fill="none"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-dasharray="156"
+            stroke-dashoffset="156"
+        >
+            <animate
+                begin="animationStart.begin"
+                end="animationStart.end"
+                attributeName="stroke-dashoffset"
+                from="156"
+                to="0"
+                dur="0.5s"
+                fill="freeze"
+            />
+        </path>
+        <!-- Д -->
+
+        <!-- А -->
+        <path
+            d="M 463.75 92 L 491.75 8 H 518.87 L 546.95 92"
+            transform="translate(-2.1 -1.5)"
+            fill="none"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-dasharray="205"
+            stroke-dashoffset="205"
+        >
+            <animate
+                begin="animationStart.begin"
+                end="animationStart.end"
+                attributeName="stroke-dashoffset"
+                from="205"
+                to="0"
+                dur="0.5s"
+                fill="freeze"
+            />
+        </path>
+        
+        <path
+            d="M 546.95 92 L 546.95 92 H 533.47 L 525.67 68.48 H 487.87 L 480.07 92 H 463.75"
+            transform="translate(-2.1 -1.5)"
+            fill="none"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-dasharray="118"
+            stroke-dashoffset="118"
+        >
+            <animate
+                begin="animationStart.begin"
+                end="animationStart.end"
+                attributeName="stroke-dashoffset"
+                from="118"
+                to="0"
+                dur="0.5s"
+                fill="freeze"
+            />
+        </path>
+
+        <path
+            d="M 520.39 52 L 507 11.84 L 493.51 52 H 520.39 Z"
+            transform="translate(-2.1 -1.5)"
+            fill="none"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-dasharray="112"
+            stroke-dashoffset="112"
+        >
+            <animate
+                begin="animationStart.begin"
+                end="animationStart.end"
+                attributeName="stroke-dashoffset"
+                from="112"
+                to="0"
+                dur="0.5s"
+                fill="freeze"
+            />
+        </path>
+        <!-- А -->
+
+        <!-- ! -->
+        <path
+            d="M 554.12 70.4 L 555.55 2 H 569 L 570.44 70.4 H 554.12"
+            transform="translate(-2.1 -1.5)"
+            fill="none"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-dasharray="167"
+            stroke-dashoffset="167"
+        >
+            <animate
+                begin="animationStart.begin"
+                end="animationStart.end"
+                attributeName="stroke-dashoffset"
+                from="167"
+                to="0"
+                dur="0.5s"
+                fill="freeze"
+            />
+        </path>
+
+        <path
+            d="M 562.4 76.76 C 567.2 76.76 570.4 80 570.4 84.92 A 8 8 0 1 1 554.32 84.92 C 554.35 80 557.59 76.76 562.39 76.76"
+            transform="translate(-2.1 -1.5)"
+            fill="none"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-dasharray="51"
+            stroke-dashoffset="51"
+        >
+            <animate
+                begin="animationStart.begin"
+                end="animationStart.end"
+                attributeName="stroke-dashoffset"
+                from="51"
+                to="0"
+                dur="0.5s"
+                fill="freeze"
+            />
+        </path>
+        <!-- ! -->
+    </g>
+</svg>
