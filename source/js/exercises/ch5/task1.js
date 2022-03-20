@@ -1,13 +1,18 @@
+import { initScenes } from './scenes/initScenes';
+import { initSvgObjects } from './svg/initSvgObjects';
+
 import { initAnimation } from './initAnimation';
-import { initObjects } from './objects/initObjects';
-import { initScene } from './initScene';
+import { initRenderer } from './initRenderer';
 import { initEventListeners } from './initEventListeners';
 
 async function scene() {
+    await initSvgObjects();
+    const scenes = await initScenes();  
+
     const animation = initAnimation();
-    const objects = await initObjects();
-    const renderer = initScene();
-    initEventListeners(renderer, objects, animation);
+    const renderer = initRenderer();
+
+    initEventListeners(renderer, scenes, animation);
 }
 
 scene();
