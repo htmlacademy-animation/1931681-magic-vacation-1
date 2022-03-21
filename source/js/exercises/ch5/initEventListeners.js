@@ -4,7 +4,7 @@ import {
     STORY_SCREEN_SLIDE2_ID,
     STORY_SCREEN_SLIDE3_ID,
     STORY_SCREEN_SLIDE4_ID
-} from './objects/misc';
+} from './scenes/misc';
 
 // using hashchange event instead of screenChanged
 // (its easier to render plane for initial page)
@@ -49,6 +49,8 @@ function initEventListeners(renderer, scenes, animation) {
 
     window.addEventListener('hashchange', tryToRenderScene);
     window.addEventListener('slide-change', tryToRenderScene);
+
+    window.addEventListener('resize', () => renderer.updateCameraProjection());
 
     tryToRenderScene();
 }

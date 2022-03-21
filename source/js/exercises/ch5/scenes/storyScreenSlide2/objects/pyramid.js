@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 
 function makePyramid() {
-    const geometry = new THREE.ConeGeometry(125 * Math.sqrt(2), 280, 4);
+    const geometry = new THREE.ConeGeometry(90 * Math.sqrt(2), 200, 4);
     const material = new THREE.MeshStandardMaterial({
         color: 0x1D69DE,
         metalness: 0.05,
@@ -10,7 +10,9 @@ function makePyramid() {
     });
     
     var pyramid = new THREE.Mesh(geometry, material);
-    pyramid.position.set(0, 50, -100);
+    pyramid.scale.set(0.5, 0.5, 0.5);
+    pyramid.position.set(0, -30, 50);
+    
 
     return pyramid;
 }

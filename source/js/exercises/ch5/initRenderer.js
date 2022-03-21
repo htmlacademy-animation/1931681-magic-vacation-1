@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 
-function initScene() {
+function initRenderer() {
     const canvasContainer = document.getElementById('threeJSCanvasContainer');
 
     const scene = new THREE.Scene();
@@ -10,11 +10,11 @@ function initScene() {
 
     const pointLight1 = new THREE.PointLight(0xF6F2FF, 0.6, 975, 2);
     // pointLight1.position.set(-785, -350, -710);
-    pointLight1.position.set(-78, -35, 50);
+    pointLight1.position.set(-78, -35, 200);
 
     const pointLight2 = new THREE.PointLight(0xF5FEFF, 0.95, 975, 2);
     // pointLight2.position.set(730, 800, -985);
-    pointLight2.position.set(130, 60, 200);
+    pointLight2.position.set(73, 80, 200);
 
     const sphereSize = 10;
     const pointLight1Helper = new THREE.PointLightHelper( pointLight1, sphereSize );
@@ -41,13 +41,18 @@ function initScene() {
     const renderer = new THREE.WebGLRenderer({
         alpha: true
     });
-    renderer.setClearColor(new THREE.Color(0x5f458c), 1);
+    renderer.setClearColor(new THREE.Color(0x9C84CD), 1);
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(window.innerWidth, window.innerHeight);
     canvasContainer.appendChild(renderer.domElement);
 
     function renderScene() {
         renderer.render(scene, camera);
+    }
+
+    function updateCameraProjection() {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        renderer.setSize(window.innerWidth, window.innerHeight);
     }
 
     function redrawScene(object) {
@@ -59,8 +64,8 @@ function initScene() {
         scene.add(object);
     }
 
-    return { renderScene, redrawScene };
+    return { renderScene, redrawScene, updateCameraProjection };
 }
 
-export { initScene };
+export { initRenderer };
 
