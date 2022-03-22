@@ -30,7 +30,10 @@ const SVGObjectsPool = {
     },
     [FLOWER_ID]: {
         shapePaths: null,
-        extrudeSettrings: { ...BASE_EXTRUDE_SETTINGS }
+        extrudeSettrings: {
+            ...BASE_EXTRUDE_SETTINGS,
+            depth: 1
+        }
     },
     [KEYHOLE_ID]: {
         shapePaths: null,
