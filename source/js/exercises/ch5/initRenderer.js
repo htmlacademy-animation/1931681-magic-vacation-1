@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 function initRenderer() {
     const canvasContainer = document.getElementById('threeJSCanvasContainer');
@@ -31,12 +32,14 @@ function initRenderer() {
 
     // const camera = new THREE.OrthographicCamera( - 1, 1, 1, - 1, 0, 1 );
     const camera = new THREE.PerspectiveCamera(
-        35,
+        75,
         window.innerWidth / window.innerHeight,
-        1,
-        750
+        0.1,
+        1500
     );
     camera.position.z = 750;
+
+    const axesHelper = new THREE.AxesHelper(1500);
 
     const renderer = new THREE.WebGLRenderer({
         alpha: true
@@ -46,7 +49,10 @@ function initRenderer() {
     renderer.setSize(window.innerWidth, window.innerHeight);
     canvasContainer.appendChild(renderer.domElement);
 
+    const controls = new OrbitControls(camera, renderer.domElement);
+
     function renderScene() {
+        controls.update();
         renderer.render(scene, camera);
     }
 
@@ -61,10 +67,15 @@ function initRenderer() {
         }
 
         scene.add(lightGroup);
+        scene.add(axesHelper);
         scene.add(object);
     }
 
-    return { renderScene, redrawScene, updateCameraProjection };
+    return {
+        renderScene,
+        redrawScene,
+        updateCameraProjection
+    };
 }
 
 export { initRenderer };

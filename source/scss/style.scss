@@ -23,3 +23,13 @@
 
 // Chapter exercises
 @import "./exercises/exercises.scss";
+
+// Used for OrbitControls access
+.page-content {
+    position: relative;
+}
+
+// #threeJSCanvasContainer {
+//     position: absolute;
+//     z-index: 2;
+// }
