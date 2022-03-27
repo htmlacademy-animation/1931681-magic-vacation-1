@@ -6,28 +6,33 @@ function initRenderer() {
 
     const scene = new THREE.Scene();
 
-    const directionalLight = new THREE.DirectionalLight(0xFFFFFF, 0.84);
-    directionalLight.target.position.set(1, 0, 0);
+    const directionalLight = new THREE.DirectionalLight(0xFFFFFF, 0.65);
+    // directionalLight.target.position.set(1, 1, 0);
+    directionalLight.position.set(-10, 50, 15);
+    directionalLight.target.position.set(0, 0, 0);
 
-    const pointLight1 = new THREE.PointLight(0xF6F2FF, 0.6, 975, 2);
-    // pointLight1.position.set(-785, -350, -710);
-    pointLight1.position.set(-78, -35, 200);
+    const pointLight1 = new THREE.PointLight(0xF6F2FF, 0.6, 1025, 2);
+    // pointLight1.position.set(-785, -350, 340);
+    pointLight1.position.set(-50, -35, 25);
 
-    const pointLight2 = new THREE.PointLight(0xF5FEFF, 0.95, 975, 2);
-    // pointLight2.position.set(730, 800, -985);
-    pointLight2.position.set(73, 80, 200);
+    const pointLight2 = new THREE.PointLight(0xF5FEFF, 0.95, 1025, 2);
+    // pointLight2.position.set(730, 800, 340);
+    pointLight2.position.set(60, 0, 100);
 
     const sphereSize = 10;
     const pointLight1Helper = new THREE.PointLightHelper( pointLight1, sphereSize );
     const pointLight2Helper = new THREE.PointLightHelper( pointLight2, sphereSize );
+    const directionalLightHelper = new THREE.DirectionalLightHelper( directionalLight, 25 );
 
     const lightGroup = new THREE.Group();
+    lightGroup.add(directionalLight.target);
     lightGroup.add(directionalLight);
     lightGroup.add(pointLight1);
     lightGroup.add(pointLight2);
 
     lightGroup.add(pointLight1Helper);
     lightGroup.add(pointLight2Helper);
+    lightGroup.add(directionalLightHelper);
     scene.add(lightGroup);
 
     // const camera = new THREE.OrthographicCamera( - 1, 1, 1, - 1, 0, 1 );
@@ -37,7 +42,7 @@ function initRenderer() {
         0.1,
         1500
     );
-    camera.position.z = 750;
+    camera.position.z = 50;
 
     const axesHelper = new THREE.AxesHelper(1500);
 

@@ -1,17 +1,10 @@
 import * as THREE from 'three';
 
-const snowMaterial = new THREE.MeshStandardMaterial({
-    color: 0xE2F2FF,
-    metalness: 0.0,
-    emissive: 0x0,
-    roughness: 5.5
-});
-const noseMaterial = new THREE.MeshStandardMaterial({
-    color: 0xD74F19,
-    metalness: 0.0,
-    emissive: 0x0,
-    roughness: 5.5
-});
+import { SnowColor, OrangeColor } from '../../../library/colors';
+import { makeStrongMaterial } from '../../../library/materials/strong';
+import { makeSoftMaterial } from '../../../library/materials/soft';
+
+const snowMaterial = makeStrongMaterial(SnowColor);
 
 function makeBottomSphere() {
     const geometry = new THREE.SphereGeometry(75, 24, 15);
@@ -33,8 +26,9 @@ function makeTopSphere() {
 
 function makeNose() {
     const geometry = new THREE.ConeGeometry(18, 75, 25);
+    const material = makeSoftMaterial(OrangeColor);
 
-    const nose = new THREE.Mesh(geometry, noseMaterial);
+    const nose = new THREE.Mesh(geometry, material);
     nose.position.set(50, 55, 0);
     nose.rotateZ(-90 * Math.PI / 180);
 
@@ -49,8 +43,9 @@ function makeSnowman() {
     snowman.add(makeNose());
 
     // snowman.position.set(0, 0, 0);
-    snowman.rotateY(-45 * Math.PI / 180);
-    snowman.scale.set(0.4, 0.4, 0.4);
+    snowman.rotateY(-30 * Math.PI / 180);
+    snowman.scale.set(0.05, 0.05, 0.05);
+    snowman.position.set(-8, 2, 10);
 
     return snowman;
 }

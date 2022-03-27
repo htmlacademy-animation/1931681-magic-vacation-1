@@ -1,15 +1,10 @@
 import * as THREE from 'three';
 
-import { makeWallFlower } from '../../library/objects/wallFlower';
-
-import { makeCarpet } from './objects/carpet';
 import { makeSaturnChandelier } from './objects/saturnChandelier';
 
-async function storyScreenSlide1() {
+async function storyScreenSlide4() {
     const group = new THREE.Group();
 
-    group.add(makeWallFlower());
-    group.add(makeCarpet());
     group.add(makeSaturnChandelier());
 
     return function renderScreen() {
@@ -17,5 +12,4 @@ async function storyScreenSlide1() {
     };
 }
 
-export { storyScreenSlide1 }; 
-
+export { storyScreenSlide4 }; 

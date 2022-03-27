@@ -17,7 +17,7 @@ function makeLatheRoad(
 
     const geometry = new THREE.LatheGeometry(
         points,
-        12,
+        25,
         fromAngle * RAD_FACTOR,
         toAngle * RAD_FACTOR
     );
