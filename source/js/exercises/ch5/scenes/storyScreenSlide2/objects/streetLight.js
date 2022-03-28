@@ -1,19 +1,11 @@
 import * as THREE from 'three';
 
+import { BlueColor, LightBlueColor } from '../../../library/colors';
+import { makeSoftMaterial } from '../../../library/materials/soft';
+
 const SQRT_2 = Math.sqrt(2);
 
-const darkBlueMaterial = new THREE.MeshStandardMaterial({
-    color: 0x1D69DE,
-    metalness: 0.0,
-    emissive: 0x0,
-    roughness: 5.5
-});
-const glassMaterial = new THREE.MeshStandardMaterial({
-    color: 0x9DB3EE,
-    metalness: 0.0,
-    emissive: 0x0,
-    roughness: 5.5
-});
+const baseMaterial = makeSoftMaterial(BlueColor);
 
 function makeLampTop() {
     const geometry = new THREE.CylinderGeometry(
@@ -22,7 +14,7 @@ function makeLampTop() {
         4
     );
 
-    const lampGlass = new THREE.Mesh(geometry, darkBlueMaterial);
+    const lampGlass = new THREE.Mesh(geometry, baseMaterial);
     lampGlass.position.set(0, 179, 0);
 
     return lampGlass;
@@ -34,8 +26,9 @@ function makeLampGlass() {
         60,
         4
     );
+    const material = makeSoftMaterial(LightBlueColor);
 
-    const lampGlass = new THREE.Mesh(geometry, glassMaterial);
+    const lampGlass = new THREE.Mesh(geometry, material);
     lampGlass.position.set(0, 147, 0);
 
     return lampGlass;
@@ -48,7 +41,7 @@ function makeLampBottom() {
         4
     );
 
-    const lampBottom = new THREE.Mesh(geometry, darkBlueMaterial);
+    const lampBottom = new THREE.Mesh(geometry, baseMaterial);
     lampBottom.position.set(0, 115, 0);
 
     return lampBottom;
@@ -57,7 +50,7 @@ function makeLampBottom() {
 function makeColumn() {
     const geometry = new THREE.CylinderGeometry(7, 7, 230);
     
-    const column = new THREE.Mesh(geometry, darkBlueMaterial);
+    const column = new THREE.Mesh(geometry, baseMaterial);
 
     return column;
 }
@@ -65,7 +58,7 @@ function makeColumn() {
 function makeBaseSphere() {
     const geometry = new THREE.SphereGeometry(16);
 
-    const baseSphere = new THREE.Mesh(geometry, darkBlueMaterial);
+    const baseSphere = new THREE.Mesh(geometry, baseMaterial);
     baseSphere.position.set(0, -115, 0);
 
     return baseSphere;
@@ -74,7 +67,7 @@ function makeBaseSphere() {
 function makeBaseCylinder() {
     const geometry = new THREE.CylinderGeometry(16, 16, 120);
 
-    const baseCylinder = new THREE.Mesh(geometry, darkBlueMaterial);
+    const baseCylinder = new THREE.Mesh(geometry, baseMaterial);
     baseCylinder.position.set(0, -175, 0);
 
     return baseCylinder;
@@ -90,9 +83,9 @@ function makeStreetLight() {
     streetLight.add(makeBaseSphere());
     streetLight.add(makeBaseCylinder());
 
-    streetLight.position.set(150, -100, 10);
+    streetLight.scale.set(0.04, 0.04, 0.04);
+    streetLight.position.set(30, 0, 20);
     streetLight.rotateY(45 * Math.PI / 180);
-    streetLight.scale.set(0.4, 0.4, 0.4);
 
     return streetLight;
 }

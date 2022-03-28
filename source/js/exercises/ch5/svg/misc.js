@@ -25,7 +25,7 @@ const SVGObjectsPool = {
         shapePaths: null,
         extrudeSettrings: {
             ...BASE_EXTRUDE_SETTINGS,
-            depth: 2
+            depth: 1
         }
     },
     [FLOWER_ID]: {
@@ -37,13 +37,16 @@ const SVGObjectsPool = {
     },
     [KEYHOLE_ID]: {
         shapePaths: null,
-        extrudeSettrings: { ...BASE_EXTRUDE_SETTINGS }
+        extrudeSettrings: {
+            ...BASE_EXTRUDE_SETTINGS,
+            depth: 25
+        }
     },
     [LEAF_ID]: {
         shapePaths: null,
         extrudeSettrings: {
             ...BASE_EXTRUDE_SETTINGS,
-            depth: 4
+            depth: 10
         }
     },
     [QUESTION_MARK_ID]: {
@@ -54,7 +57,7 @@ const SVGObjectsPool = {
         shapePaths: null,
         extrudeSettrings: {
             ...BASE_EXTRUDE_SETTINGS,
-            depth: 8
+            depth: 15
         }
     }
 };

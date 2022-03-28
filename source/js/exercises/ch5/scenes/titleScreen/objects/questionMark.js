@@ -1,5 +1,7 @@
 import * as THREE from 'three';
 
+import { BlueColor } from '../../../library/colors';
+import { makeBasicMaterial } from '../../../library/materials/basic';
 import {
     QUESTION_MARK_ID,
     makeSVGExtrudeGeometry
@@ -9,19 +11,14 @@ const RAD_FACTOR = Math.PI / 180;
 
 function makeQuestionMark() {
     const geometry = makeSVGExtrudeGeometry(QUESTION_MARK_ID);
-    const material = new THREE.MeshStandardMaterial({
-        color: 0x4066C4,
-        metalness: 0.05,
-        emissive: 0x0,
-        roughness: 0.5
-    });
+    const material = makeBasicMaterial(BlueColor);
    
     const questionMark = new THREE.Mesh(geometry, material);
 
-    questionMark.scale.set(0.6, 0.6, 0.6);
-    questionMark.position.set(40, -170, 50);
-    questionMark.rotateZ(15 * RAD_FACTOR);
-    questionMark.rotateX(130 * RAD_FACTOR);
+    questionMark.scale.set(0.11, 0.11, 0.11);
+    questionMark.position.set(10, -25, 1);
+    questionMark.rotateZ(25 * RAD_FACTOR);
+    questionMark.rotateX(105 * RAD_FACTOR);
 
     return questionMark;
 }

@@ -1,5 +1,7 @@
 import * as THREE from 'three';
 
+import { BlueColor } from '../../../library/colors';
+import { makeBasicMaterial } from '../../../library/materials/basic';
 import {
     SNOWFLAKE_ID,
     makeSVGExtrudeGeometry
@@ -9,19 +11,14 @@ const RAD_FACTOR = Math.PI / 180;
 
 function makeSnowflake() {
     const geometry = makeSVGExtrudeGeometry(SNOWFLAKE_ID);
-    const material = new THREE.MeshStandardMaterial({
-        color: 0x335CB7,
-        metalness: 0.05,
-        emissive: 0x0,
-        roughness: 0.5
-    });
+    const material = makeBasicMaterial(BlueColor);
    
     const snowflake = new THREE.Mesh(geometry, material);
 
-    snowflake.scale.set(0.6, 0.6, 0.6);
-    snowflake.position.set(-170, -5, 50);
+    snowflake.scale.set(0.08, 0.08, 0.08);
+    snowflake.position.set(-28, 2, 8);
+    snowflake.rotateY(45 * RAD_FACTOR);
     snowflake.rotateX(-15 * RAD_FACTOR);
-    snowflake.rotateY(35 * RAD_FACTOR);
 
     return snowflake;
 }
