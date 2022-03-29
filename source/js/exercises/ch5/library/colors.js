@@ -26,7 +26,12 @@ const GreenColor = new THREE.Color('rgb(0, 210, 134)');
 const WhiteColor = new THREE.Color('rgb(255, 255, 255)');
 const SnowColor = new THREE.Color('rgb(182, 206, 240)');
 
+function toVec3(color) {
+    return [ color.r, color.g, color.b ];
+}
+
 export {
+    toVec3,
     BlueColor,
     BrightBlueColor,
     LightBlueColor,

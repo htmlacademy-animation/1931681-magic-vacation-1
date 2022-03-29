@@ -6,7 +6,8 @@ const RAD_FACTOR = Math.PI / 180;
 function makeLatheRoad(
     fromAngle,
     toAngle,
-    width
+    width,
+    material
 ) {
     var points = [
         new THREE.Vector2(START_WIDTH, 30.5),
@@ -21,12 +22,6 @@ function makeLatheRoad(
         fromAngle * RAD_FACTOR,
         toAngle * RAD_FACTOR
     );
-    const material = new THREE.MeshStandardMaterial({
-        color: 0x646C7C,
-        metalness: 0.05,
-        emissive: 0x0,
-        roughness: 0.5
-    });
    
     const latheRoad = new THREE.Mesh(geometry, material);
 
