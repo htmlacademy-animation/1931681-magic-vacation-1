@@ -39,10 +39,11 @@ function initEventListeners(renderer, scenes, animation) {
         }
         const scene = scenes[sceneId];
         if (scene) {
-            renderer.redrawScene(scene(0));
+            renderer.setCameraAndLights(scene.sceneDescription);
+            renderer.redrawScene(scene.content(0));
 
             animation.restartAnimation(time => 
-                renderer.renderScene(scene(time))
+                renderer.renderScene(scene.content(time))
             );            
         }
     }
