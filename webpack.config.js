@@ -85,7 +85,7 @@ module.exports = {
         ]
       },
       {
-        test: /(\.vert|\.frag)$/,
+        test: /(\.vert|\.frag|\.obj|\.gltf)$/,
         use: [
           {
             loader: 'raw-loader'

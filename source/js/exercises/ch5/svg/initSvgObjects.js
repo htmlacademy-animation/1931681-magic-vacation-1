@@ -1,7 +1,6 @@
 import { SVGLoader } from 'three/examples/jsm/loaders/SVGLoader';
 
 import {
-    KEYHOLE_ID,
     AllSvgObjects,
     setSVGPoolShapePath,
     SVGObjectsDescriptors
