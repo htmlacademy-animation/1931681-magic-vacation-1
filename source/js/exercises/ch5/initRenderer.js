@@ -1,23 +1,18 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
+const RAD_FACTOR = Math.PI / 180;
+
 function initRenderer() {
     const canvasContainer = document.getElementById('threeJSCanvasContainer');
 
     const scene = new THREE.Scene();
 
-    const directionalLight = new THREE.DirectionalLight(0xFFFFFF, 0.65);
-    // directionalLight.target.position.set(1, 1, 0);
-    directionalLight.position.set(-10, 50, 15);
+    const directionalLight = new THREE.DirectionalLight(0xFFFFFF, 0.65);  
     directionalLight.target.position.set(0, 0, 0);
 
     const pointLight1 = new THREE.PointLight(0xF6F2FF, 0.6, 1025, 2);
-    // pointLight1.position.set(-785, -350, 340);
-    pointLight1.position.set(-50, -35, 25);
-
-    const pointLight2 = new THREE.PointLight(0xF5FEFF, 0.95, 1025, 2);
-    // pointLight2.position.set(730, 800, 340);
-    pointLight2.position.set(60, 0, 100);
+    const pointLight2 = new THREE.PointLight(0xF5FEFF, 0.95, 1025, 2);  
 
     const sphereSize = 10;
     const pointLight1Helper = new THREE.PointLightHelper( pointLight1, sphereSize );
@@ -35,15 +30,12 @@ function initRenderer() {
     lightGroup.add(directionalLightHelper);
     scene.add(lightGroup);
 
-    // const camera = new THREE.OrthographicCamera( - 1, 1, 1, - 1, 0, 1 );
     const camera = new THREE.PerspectiveCamera(
         75,
         window.innerWidth / window.innerHeight,
         0.1,
         1500
     );
-    camera.position.z = 50;
-
     const axesHelper = new THREE.AxesHelper(1500);
 
     const renderer = new THREE.WebGLRenderer({
@@ -76,10 +68,20 @@ function initRenderer() {
         scene.add(object);
     }
 
+    function setCameraAndLights(sceneDescription) {
+        camera.position.copy(sceneDescription.cameraPosition);
+        directionalLight.position.copy(sceneDescription.directionalLightPosition);
+        pointLight1.position.copy(sceneDescription.pointLight1Position);
+        pointLight2.position.copy(sceneDescription.pointLight2Position);
+
+        controls.update();
+    }
+
     return {
         renderScene,
         redrawScene,
-        updateCameraProjection
+        updateCameraProjection,
+        setCameraAndLights
     };
 }
 
