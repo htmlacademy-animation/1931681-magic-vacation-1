@@ -1,12 +1,12 @@
 import {
-    Theme as SaturnChandelierTheme,
-    makeSaturnChandelier as makeSaturnChandelierGeneral,
-} from '../../../library/objects/saturnChandelier';
+  Theme as SaturnChandelierTheme,
+  makeSaturnChandelier as makeSaturnChandelierGeneral,
+} from "../../../library/objects/saturnChandelier";
 
 function makeSaturnChandelier() {
-    const saturnChandelier = makeSaturnChandelierGeneral(SaturnChandelierTheme.Dark);
+  const saturnChandelier = makeSaturnChandelierGeneral(SaturnChandelierTheme.Dark);
 
-    return saturnChandelier;
+  return saturnChandelier;
 }
 
-export { makeSaturnChandelier };
+export {makeSaturnChandelier};

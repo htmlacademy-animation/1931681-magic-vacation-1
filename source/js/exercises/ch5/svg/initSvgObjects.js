@@ -1,30 +1,30 @@
-import { SVGLoader } from 'three/examples/jsm/loaders/SVGLoader';
+import {SVGLoader} from "three/examples/jsm/loaders/SVGLoader";
 
 import {
-    AllSvgObjects,
-    setSVGPoolShapePath,
-    SVGObjectsDescriptors
-} from './misc';
+  AllSvgObjects,
+  setSVGPoolShapePath,
+  SVGObjectsDescriptors
+} from "./misc";
 
 const loader = new SVGLoader();
 
 async function loadSVG(svgId) {
-    return new Promise(resolve =>
-        loader.load(
-            SVGObjectsDescriptors[svgId],
-            data => {
-                setSVGPoolShapePath(
-                    svgId,
-                    data.paths[0].toShapes()
-                );
-                resolve();
-            }
-        )
-    );
+  return new Promise((resolve) =>
+    loader.load(
+        SVGObjectsDescriptors[svgId],
+        (data) => {
+          setSVGPoolShapePath(
+              svgId,
+              data.paths[0].toShapes()
+          );
+          resolve();
+        }
+    )
+  );
 }
 
 async function initSvgObjects() {
-    await Promise.all(AllSvgObjects.map(objectId => loadSVG(objectId)));
+  await Promise.all(AllSvgObjects.map((objectId) => loadSVG(objectId)));
 }
 
-export { initSvgObjects };
+export {initSvgObjects};

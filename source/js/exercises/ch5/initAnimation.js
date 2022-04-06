@@ -1,28 +1,28 @@
 function initAnimation() {
-    let animationStart;
-    let animationTime;
-    let tickCallback;
+  let animationStart;
+  let animationTime;
+  let tickCallback;
 
-    function restartAnimation(tick) {
-        animationStart = Date.now();
-        animationTime = 0;
-        tickCallback = tick;
+  function restartAnimation(tick) {
+    animationStart = Date.now();
+    animationTime = 0;
+    tickCallback = tick;
+  }
+
+  function animationTick() {
+    animationTime = Date.now() - animationStart;
+
+    if (tickCallback) {
+      tickCallback(animationTime);
     }
 
-    function animationTick() {
-        animationTime = Date.now() - animationStart;
+    window.requestAnimationFrame(animationTick);
+  }
 
-        if (tickCallback) {
-            tickCallback(animationTime);
-        }
+  restartAnimation();
+  animationTick();
 
-        window.requestAnimationFrame(animationTick);
-    }
-
-    restartAnimation();
-    animationTick();
-
-    return { restartAnimation };
+  return {restartAnimation};
 }
 
-export { initAnimation };
+export {initAnimation};

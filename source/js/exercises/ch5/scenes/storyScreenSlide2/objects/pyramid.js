@@ -1,18 +1,20 @@
-import * as THREE from 'three';
+import * as THREE from "three";
 
-import { BlueColor } from '../../../library/colors';
-import { makeSoftMaterial } from '../../../library/materials/soft';
+import {BlueColor} from "../../../library/colors";
+import {makeSoftMaterial} from "../../../library/materials/soft";
+
+const RAD_FACTOR = Math.PI / 180;
 
 function makePyramid() {
-    const geometry = new THREE.ConeGeometry(90 * Math.sqrt(2), 200, 4);
-    const material = makeSoftMaterial(BlueColor);
-    
-    var pyramid = new THREE.Mesh(geometry, material);
-    pyramid.scale.set(0.07, 0.07, 0.07);
-    pyramid.position.set(0, 0, 0);
-    
+  const geometry = new THREE.ConeGeometry(90 * Math.sqrt(2), 185, 4);
+  const material = makeSoftMaterial(BlueColor);
 
-    return pyramid;
+  let pyramid = new THREE.Mesh(geometry, material);
+  pyramid.scale.set(0.07, 0.07, 0.07);
+  pyramid.position.set(14, 7, 15);
+  pyramid.rotateY(45 * RAD_FACTOR);
+
+  return pyramid;
 }
 
-export { makePyramid };
+export {makePyramid};

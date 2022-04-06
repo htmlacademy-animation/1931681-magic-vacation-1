@@ -1,143 +1,143 @@
 @keyframes rules-item-bullet-size {
-    to {
-        top: 0;
-        left: 0;
-        width: 4.5rem;
-        height: 4.5rem;
-    }
+  to {
+    top: 0;
+    left: 0;
+    width: 4.5rem;
+    height: 4.5rem;
+  }
 }
 
 @keyframes rules-item-bullet-text {
-    to {
-        color: white;
-    }
+  to {
+    color: white;
+  }
 }
 
 @keyframes rules-item-text {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes button-width {
-    to {
-        width: 100%;
-    }
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes button-opacity {
-    to {
-        opacity: 1;
-    }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes button-color {
-    to {
-        color: #5f458c;
-    }
+  to {
+    color: #5f458c;
+  }
 }
 
 
 .screen--rules {
-    & .rules .rules__item {
-        float: left;
-        margin: 0.5rem 0 5.7rem 0;
+  & .rules .rules__item {
+    float: left;
+    margin: 0.5rem 0 5.7rem 0;
 
-        &::before {
-            top: 2.25rem;
-            left: 2.25rem;
-            width: 0;
-            height: 0;
-        
-            color: transparent;
+    &::before {
+      top: 2.25rem;
+      left: 2.25rem;
+      width: 0;
+      height: 0;
 
-            animation-name: rules-item-bullet-size, rules-item-bullet-text;
-            animation-duration: 0.3s, 0.3s;
-            animation-timing-function: cubic-bezier(.17,.67,.65,1.46), steps(1, end);
-            animation-fill-mode: forwards, forwards;
-        }
+      color: transparent;
 
-        & p {
-            opacity: 0;
-            transform: translateX(30px);
-
-            animation-name: rules-item-text;
-            animation-duration: 0.3s;
-            animation-timing-function: ease-in-out;
-            animation-fill-mode: forwards;
-        }
-
-        &:nth-of-type(1) {
-            & p {
-                animation-delay: 0.2s;
-            }
-        }
-
-        &:nth-of-type(2) {
-            &::before {
-                animation-delay: 0.3s;
-            }
-            
-            & p {
-                animation-delay: 0.5s;
-            }
-        }
-
-        &:nth-of-type(3) {
-            &::before {
-                animation-delay: 0.6s;
-            }
-            
-            & p {
-                animation-delay: 0.8s;
-            }
-        }
-
-        &:nth-of-type(4) {
-            &::before {
-                animation-delay: 0.9s;
-            }
-            
-            & p {
-                animation-delay: 1.2s;
-            }
-        }
+      animation-name: rules-item-bullet-size, rules-item-bullet-text;
+      animation-duration: 0.3s, 0.3s;
+      animation-timing-function: cubic-bezier(0.17, 0.67, 0.65, 1.46), steps(1, end);
+      animation-fill-mode: forwards, forwards;
     }
 
-    & .rules__link {
-        opacity: 0;
-        color: rgba(0,0,0,0);
+    & p {
+      opacity: 0;
+      transform: translateX(30px);
 
-        animation-name: button-opacity, button-color;
-        animation-duration: 0.5s, 0.3s;
-        animation-timing-function: steps(1, start), ease-in-out;
-        animation-fill-mode: forwards, forwards;
-        animation-delay: 1.3s, 1.6s;
-
-        &::before {
-            width: 6rem;
-            left: auto;
-            right: 0;
-            transform: translate(0, -50%);
-
-            animation-name: button-width;
-            animation-duration: 0.5s;
-            animation-timing-function: ease-out;
-            animation-fill-mode: forwards;
-            animation-delay: 1.3s;
-
-            @media (min-width: $stop-scaling) {
-                width: calc(3rem + 30px);
-            }
-        
-            @media (max-width: $tablet) and (orientation: portrait) {
-                width: 4rem;
-            }
-        
-            @media (max-width: $mobile) and (orientation: landscape) {
-                width: 4rem;
-            }
-        }
+      animation-name: rules-item-text;
+      animation-duration: 0.3s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
     }
+
+    &:nth-of-type(1) {
+      & p {
+        animation-delay: 0.2s;
+      }
+    }
+
+    &:nth-of-type(2) {
+      &::before {
+        animation-delay: 0.3s;
+      }
+
+      & p {
+        animation-delay: 0.5s;
+      }
+    }
+
+    &:nth-of-type(3) {
+      &::before {
+        animation-delay: 0.6s;
+      }
+
+      & p {
+        animation-delay: 0.8s;
+      }
+    }
+
+    &:nth-of-type(4) {
+      &::before {
+        animation-delay: 0.9s;
+      }
+
+      & p {
+        animation-delay: 1.2s;
+      }
+    }
+  }
+
+  & .rules__link {
+    opacity: 0;
+    color: rgba(0, 0, 0, 0);
+
+    animation-name: button-opacity, button-color;
+    animation-duration: 0.5s, 0.3s;
+    animation-timing-function: steps(1, start), ease-in-out;
+    animation-fill-mode: forwards, forwards;
+    animation-delay: 1.3s, 1.6s;
+
+    &::before {
+      width: 6rem;
+      left: auto;
+      right: 0;
+      transform: translate(0, -50%);
+
+      animation-name: button-width;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+      animation-delay: 1.3s;
+
+      @media (min-width: $stop-scaling) {
+        width: calc(3rem + 30px);
+      }
+
+      @media (max-width: $tablet) and (orientation: portrait) {
+        width: 4rem;
+      }
+
+      @media (max-width: $mobile) and (orientation: landscape) {
+        width: 4rem;
+      }
+    }
+  }
 }

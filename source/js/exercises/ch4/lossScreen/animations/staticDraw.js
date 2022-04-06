@@ -1,9 +1,9 @@
 function staticDraw(context, image, time, ...args) {
-    context.save();
+  context.save();
 
-    context.drawImage.apply(context, [image, ...args]);
+  context.drawImage.apply(context, [image, ...args]);
 
-    context.restore();
+  context.restore();
 }
 
-export { staticDraw };
+export {staticDraw};

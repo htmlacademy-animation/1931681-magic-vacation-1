@@ -1,4 +1,4 @@
-import throttle from 'lodash/throttle';
+import throttle from "lodash/throttle";
 export default class FullPageScroll {
   constructor() {
     this.THROTTLE_TIMEOUT = 1000;
@@ -10,10 +10,10 @@ export default class FullPageScroll {
     this.screenElements = document.querySelectorAll(`.screen:not(.screen--result)`);
     this.menuElements = document.querySelectorAll(`.page-header__menu .js-menu-link`);
     this.transitions = [
-        { from: 1, to: 2, animation: 'BottomToTop' }, // story -> prizes
-        { from: 2, to: 3, animation: 'FadeOut' } // prizes -> rules
-      ]
-    this.enableUIColoring = [ { at: 1 } ]; // enable UI coloring by slider position at story screen
+      {from: 1, to: 2, animation: `BottomToTop`}, // story -> prizes
+      {from: 2, to: 3, animation: `FadeOut`} // prizes -> rules
+    ];
+    this.enableUIColoring = [{at: 1}]; // enable UI coloring by slider position at story screen
 
     this.activeScreen = 0;
     this.previousScreen = 0;
@@ -64,15 +64,15 @@ export default class FullPageScroll {
     const enableUIColoring = this.shouldEnableUIColoring();
 
     if (enableUIColoring) {
-        document.body.classList.add('with-ui-coloring');
+      document.body.classList.add(`with-ui-coloring`);
     } else {
-      document.body.classList.remove('with-ui-coloring');
+      document.body.classList.remove(`with-ui-coloring`);
     }
   }
 
   changeVisibilityDisplay() {
     const changeTransition = this.addPageChangeTransition();
-    let transitionClass = changeTransition ? `exiting${changeTransition.animation}` : '';
+    let transitionClass = changeTransition ? `exiting${changeTransition.animation}` : ``;
 
     this.screenElements.forEach((screen, i) => {
       if (changeTransition && i === this.previousScreen) {
@@ -80,10 +80,10 @@ export default class FullPageScroll {
       } else {
         screen.classList.add(`screen--hidden`);
       }
-      
+
       screen.classList.remove(`active`);
     });
-    
+
     if (changeTransition) {
       setTimeout(() => {
         this.screenElements[this.activeScreen].classList.remove(`screen--hidden`);
@@ -96,7 +96,7 @@ export default class FullPageScroll {
 
       this.screenElements[this.activeScreen].classList.add(`entering`);
     } else {
-      this.screenElements[this.activeScreen].classList.remove(`screen--hidden`);  
+      this.screenElements[this.activeScreen].classList.remove(`screen--hidden`);
       setTimeout(() => {
         this.screenElements[this.activeScreen].classList.add(`active`);
       }, this.PAGE_ACTIVE_DELAY);
@@ -114,9 +114,9 @@ export default class FullPageScroll {
   emitChangeDisplayEvent() {
     const event = new CustomEvent(`screenChanged`, {
       detail: {
-        'screenId': this.activeScreen,
-        'screenName': this.screenElements[this.activeScreen].id,
-        'screenElement': this.screenElements[this.activeScreen]
+        "screenId": this.activeScreen,
+        "screenName": this.screenElements[this.activeScreen].id,
+        "screenElement": this.screenElements[this.activeScreen]
       }
     });
 
@@ -135,14 +135,14 @@ export default class FullPageScroll {
   addPageChangeTransition() {
     return this.previousScreen !== this.activeScreen &&
       this.transitions.find(
-        transition => this.previousScreen === transition.from && this.activeScreen === transition.to
+          (transition) => this.previousScreen === transition.from && this.activeScreen === transition.to
       );
   }
 
   shouldEnableUIColoring() {
     return this.previousScreen !== this.activeScreen &&
       this.enableUIColoring.some(
-        position => this.activeScreen === position.at
+          (position) => this.activeScreen === position.at
       );
   }
 }

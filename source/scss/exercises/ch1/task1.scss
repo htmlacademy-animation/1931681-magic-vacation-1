@@ -1,124 +1,126 @@
 // ex 2
 .page-header__menu ul a {
-    transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 
+  &::after {
+    width: 0;
+    display: block;
+    left: auto;
+    right: 0;
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  &.active::after {
+    width: 100%;
+  }
+
+  &:hover,
+  &:focus {
     &::after {
-        width: 0;
-        display: block;
-        left: auto;
-        right: 0;
-
-        transition: all 0.3s ease-in-out;
+      width: 100%;
+      left: 0;
+      right: auto;
     }
-
-    &.active::after {
-        width: 100%;
-    }
-    
-    &:hover, &:focus {
-        &::after {
-            width: 100%;
-            left: 0;
-            right: auto;
-        }
-    }
+  }
 }
 
 // ex 3
 .social-block--active .social-block__toggler {
+  transition: all 0.3s ease-in-out;
+  transition-property: color, background-color, border-color;
+
+  &::before {
     transition: all 0.3s ease-in-out;
     transition-property: color, background-color, border-color;
+  }
 
-    &:before {
-        transition: all 0.3s ease-in-out;
-        transition-property: color, background-color, border-color;
+  &:not(:hover) {
+    color: white;
+
+    &::before {
+      background-color: #a67ee5;
+      border-color: #a67ee5;
     }
-
-    &:not(:hover) {
-        color: white;
-
-        &:before {
-            background-color: #a67ee5;
-            border-color: #a67ee5;        
-        }
-    }
+  }
 }
 
 .social-block__list {
-    .social-block--active & {  
-        & .social-block__link svg {
-          opacity: 1;
-        }
-    
-        & .social-block__link--fb svg {
-          transition: opacity 0.15s ease-in-out;
-        }
-    
-        & .social-block__link--insta svg {
-          transition: opacity 0.15s ease-in-out 0.15s;
-        }
-    
-        & .social-block__link--vk svg {
-          transition: opacity 0.15s ease-in-out 0.3s;
-        }
+  .social-block--active & {
+    & .social-block__link svg {
+      opacity: 1;
     }
 
-    li a svg {
-        opacity: 0;
+    & .social-block__link--fb svg {
+      transition: opacity 0.15s ease-in-out;
     }
+
+    & .social-block__link--insta svg {
+      transition: opacity 0.15s ease-in-out 0.15s;
+    }
+
+    & .social-block__link--vk svg {
+      transition: opacity 0.15s ease-in-out 0.3s;
+    }
+  }
+
+  li a svg {
+    opacity: 0;
+  }
 }
 
 // ex 4
 .intro__message {
-    transform: translateY(10px);
-    opacity: 0;
-    transition: all 0.3s ease-in-out;
-    transition-property: transform, opacity;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  transition-property: transform, opacity;
 }
 
 .screen--intro.active .intro__message {
-    transform: translateY(0);
-    opacity: 1;
+  transform: translateY(0);
+  opacity: 1;
 }
 
 // ex 5
 .swiper-slide .slider__item-text {
-    transform: translateX(30px);
-    opacity: 0;
-    transition: all 0.5s ease-in-out 0.3s;
-    transition-property: transform, opacity;
+  transform: translateX(30px);
+  opacity: 0;
+  transition: all 0.5s ease-in-out 0.3s;
+  transition-property: transform, opacity;
 }
-  
-.swiper-slide-active, .swiper-slide-next {
-    & .slider__item-text {
-        transform: translateX(0);
-        opacity: 1;
-    }
+
+.swiper-slide-active,
+.swiper-slide-next {
+  & .slider__item-text {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 // ex 6
 .screen--game .chat__footer .form {
-    transition: width 0.5s ease-in-out;
-    width: 32.2rem;
-    margin-left: auto;
+  transition: width 0.5s ease-in-out;
+  width: 32.2rem;
+  margin-left: auto;
 
-    @media (min-width: $stop-scaling) {
-        width: 322px;
-    }
+  @media (min-width: $stop-scaling) {
+    width: 322px;
+  }
 
-    @media (orientation: portrait) {
-        width: 10rem;
-    }
-    
-    @media (max-width: $tablet) and (orientation: landscape) {
-        width: 20.2rem;
-    }
-    
-    @media (max-width: $mobile) and (orientation: landscape) {
-        width: 10rem;
-    }
+  @media (orientation: portrait) {
+    width: 10rem;
+  }
+
+  @media (max-width: $tablet) and (orientation: landscape) {
+    width: 20.2rem;
+  }
+
+  @media (max-width: $mobile) and (orientation: landscape) {
+    width: 10rem;
+  }
 }
 
 .screen--game.active .chat__footer .form {
-    width: 100%;
+  width: 100%;
 }

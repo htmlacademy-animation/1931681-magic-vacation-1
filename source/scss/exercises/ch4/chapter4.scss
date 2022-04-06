@@ -1,88 +1,88 @@
 @keyframes prizesItemBOpacity {
-    to {
-        opacity: 1;
-    }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes prizesItemSpanPositionOpacity {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .prizes__item--journeys .prizes__desc {
-    & b {
-        width: 68px;
-        text-align: right;
-    
-        animation-name: prizesItemBOpacity;
-        animation-duration: 0.3s;
-        animation-fill-mode: forwards;
-        animation-delay: 2.85s;
-    
-        opacity: 0;
-    }
+  & b {
+    width: 68px;
+    text-align: right;
 
-    & span {
-        animation-name: prizesItemSpanPositionOpacity;
-        animation-duration: 0.7s;
-        animation-fill-mode: forwards;
-        animation-delay: 2.7s;
+    animation-name: prizesItemBOpacity;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    animation-delay: 2.85s;
 
-        opacity: 0;
-        transform: translateX(40px);
-    }
+    opacity: 0;
+  }
+
+  & span {
+    animation-name: prizesItemSpanPositionOpacity;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+    animation-delay: 2.7s;
+
+    opacity: 0;
+    transform: translateX(40px);
+  }
 }
 
 .prizes__item--cases .prizes__icon {
-    margin-left: -7rem;
+  margin-left: -7rem;
 }
 
 .prizes__item--cases .prizes__desc {
-    & b {
-        width: 68px;
-        text-align: right;
-    
-        animation-name: prizesItemBOpacity;
-        animation-duration: 0.3s;
-        animation-fill-mode: forwards;
-        animation-delay: 5.7s;
-    
-        opacity: 0;
-    }
+  & b {
+    width: 68px;
+    text-align: right;
 
-    & span {
-        animation-name: prizesItemSpanPositionOpacity;
-        animation-duration: 0.7s;
-        animation-fill-mode: forwards;
-        animation-delay: 5.55s;
+    animation-name: prizesItemBOpacity;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    animation-delay: 5.7s;
 
-        opacity: 0;
-        transform: translateX(40px);
-    }
+    opacity: 0;
+  }
+
+  & span {
+    animation-name: prizesItemSpanPositionOpacity;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+    animation-delay: 5.55s;
+
+    opacity: 0;
+    transform: translateX(40px);
+  }
 }
 
 .prizes__item--codes .prizes__desc {
-    & b {
-        width: 232px;
-        text-align: right;
-        
-        animation-name: prizesItemBOpacity;
-        animation-duration: 0.3s;
-        animation-fill-mode: forwards;
-        animation-delay: 7.2s;
-    
-        opacity: 0;
-    }
+  & b {
+    width: 232px;
+    text-align: right;
 
-    & span {
-        animation-name: prizesItemSpanPositionOpacity;
-        animation-duration: 0.7s;
-        animation-fill-mode: forwards;
-        animation-delay: 7.05s;
+    animation-name: prizesItemBOpacity;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    animation-delay: 7.2s;
 
-        opacity: 0;
-        transform: translateX(40px);
-    }
+    opacity: 0;
+  }
+
+  & span {
+    animation-name: prizesItemSpanPositionOpacity;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+    animation-delay: 7.05s;
+
+    opacity: 0;
+    transform: translateX(40px);
+  }
 }

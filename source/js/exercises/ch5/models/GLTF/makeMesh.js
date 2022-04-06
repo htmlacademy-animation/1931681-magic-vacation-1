@@ -1,7 +1,7 @@
 function GLTF(geometry) {
-    const destGeometry = geometry.clone();
+  const destGeometry = geometry.clone();
 
-    return destGeometry;
+  return destGeometry;
 }
 
-export { GLTF };
+export {GLTF};

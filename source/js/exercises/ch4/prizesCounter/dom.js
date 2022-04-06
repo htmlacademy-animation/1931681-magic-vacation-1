@@ -1,3 +1,3 @@
 export default function createAndAppendCounter(selector, value) {
-    document.querySelector(selector).innerText = value;
+  document.querySelector(selector).innerText = value;
 }
