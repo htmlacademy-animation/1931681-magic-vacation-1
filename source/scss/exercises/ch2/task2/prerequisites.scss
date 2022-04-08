@@ -1,24 +1,24 @@
 .intro__title {
-    max-width: 101rem;
+  max-width: 101rem;
 }
 
-#date .text-animation-character:last-of-type {
-    padding-right: 2px;
+.dateWordsAnimation .text-animation-character:last-of-type {
+  padding-right: 2px;
 }
 
 .text-animation-line {
-    display: block;
+  display: block;
 }
 
 .text-animation-word {
-    overflow: hidden;
-    display: inline-block;
+  overflow: hidden;
+  display: inline-block;
 }
 
 .text-animation-character {
-    display: inline-block;
+  display: inline-block;
 }
 
 // .game__buttons {
-//     display: block;
+//   display: block;
 // }

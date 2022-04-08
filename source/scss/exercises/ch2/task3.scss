@@ -1,326 +1,342 @@
 // ex 1
 @keyframes sliderButtonNext {
-    from {
-        opacity: 0;
-        transform: translateX(10vw) rotate(-180deg);
-    }
+  from {
+    opacity: 0;
+    transform: translateX(10vw) rotate(-180deg);
+  }
 
-    to {
-        opacity: 1;
-        transform: translateX(0) rotate(0deg);
-    }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
 }
 
 @keyframes sliderButtonPrev {
-    from {
-        opacity: 0;
-        transform: translateX(-10vw) rotate(-180deg);
-    }
+  from {
+    opacity: 0;
+    transform: translateX(-10vw) rotate(-180deg);
+  }
 
-    to {
-        opacity: 1;
-        transform: translateX(0) rotate(0deg);
-    }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
 }
 
 .screen--story {
-    & .slider__control--next {
-        opacity: 0;
-        transform: translateX(12vw) rotate(-180deg);
-    }
+  & .slider__control--next {
+    opacity: 0;
+    transform: translateX(12vw) rotate(-180deg);
+  }
 
-    & .slider__control--prev {
-        opacity: 0;
-        transform: translateX(-12vw) rotate(-180deg);
-    }    
+  & .slider__control--prev {
+    opacity: 0;
+    transform: translateX(-12vw) rotate(-180deg);
+  }
 }
 
 .screen--story.active .slider__controls {
-    & .slider__control--next {
-        animation-name: sliderButtonNext;
-        animation-duration: 0.5s;
-        animation-fill-mode: forwards;
-        animation-timing-function: ease-in-out;
-    }
+  & .slider__control--next {
+    animation-name: sliderButtonNext;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  }
 
-    & .slider__control--prev {
-        animation-name: sliderButtonPrev;
-        animation-duration: 0.5s;
-        animation-fill-mode: forwards;
-        animation-timing-function: ease-in-out;
-    }
+  & .slider__control--prev {
+    animation-name: sliderButtonPrev;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  }
 }
 
 // ex 2
 @keyframes resultButtonText {
-    from {
-        color: transparent;
-    }
+  from {
+    color: transparent;
+  }
 
-    to {
-        color: white;
-    }
+  to {
+    color: white;
+  }
 }
 
 @keyframes resultButtonRetrySVG {
-    from {
-        opacity: 0;
-        transform: translateX(3vw) rotate(90deg);
-    }
+  from {
+    opacity: 0;
+    transform: translateX(3vw) rotate(90deg);
+  }
 
-    to {
-        opacity: 1;
-        transform: translateX(0) rotate(0deg);
-    }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
 }
 
 .screen--result {
-    & .result__button {
-        animation-name: resultButtonText;
-        animation-duration: 0.5s;
-        animation-delay: 1s;
-        animation-fill-mode: forwards;
-        animation-timing-function: ease-in-out;
+  & .result__button {
+    animation-name: resultButtonText;
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
 
-        color: transparent;
+    color: transparent;
 
-        & span {
-            animation-name: resultButtonRetrySVG;
-            animation-duration: 0.5s;
-            animation-delay: 1s;
-            animation-fill-mode: forwards;
-            animation-timing-function: ease-in-out;
+    & span {
+      animation-name: resultButtonRetrySVG;
+      animation-duration: 0.5s;
+      animation-delay: 1s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in-out;
 
-            opacity: 0;
-            transform: translateX(3vw) rotate(90deg);
-        }
+      opacity: 0;
+      transform: translateX(3vw) rotate(90deg);
     }
+  }
 }
 
 // ex 3
 
 @keyframes footerFadingOut {
-    from {
-        color: #5f458c;
-    }
+  from {
+    color: #5f458c;
+  }
 
-    to {
-        color: transparent;
-    }
+  to {
+    color: transparent;
+  }
 }
 
 @keyframes footerFadingIn {
-    from {
-        color: transparent;
-    }
+  from {
+    color: transparent;
+  }
 
-    to {
-        color: #5f458c;
-    }
+  to {
+    color: #5f458c;
+  }
 }
 
 .screen--prizes.exitingFadeOut .screen__footer-note {
-    animation-name: footerFadingOut;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
+  animation-name: footerFadingOut;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 }
 
 .screen--rules.active .disclaimer {
-    animation-name: footerFadingIn;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
+  animation-name: footerFadingIn;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 
-    color: transparent;
+  color: transparent;
 }
 
 @keyframes footerFullText {
-    from {
-        color: transparent;
-    }
+  from {
+    color: transparent;
+  }
 
-    to {
-        color: #5f458c;
-    }
+  to {
+    color: #5f458c;
+  }
 }
 
 @keyframes footerFullTablet {
-    from {
-        width: 3.5rem;
-        height: 3.5rem;
-    }
+  from {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
 
-    to {
-        width: 100%;
-        height: 18rem;
-    }
+  to {
+    width: 100%;
+    height: 18rem;
+  }
 }
 
 @keyframes footerFullMobile {
-    from {
-        width: 3.5rem;
-        height: 3.5rem;
-    }
+  from {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
 
-    to {
-        width: 100%;
-        height: 16rem;
-    }
+  to {
+    width: 100%;
+    height: 16rem;
+  }
 }
 
 .screen__footer--full {
-    color: transparent;
+  color: transparent;
 
-    @media (max-width: $tablet) and (orientation: portrait) {
-        animation-name: footerFullTablet, footerFullText;
-        animation-duration: 0.4s, 0.3s;
-        animation-delay: 0s, 0.4s;
-        animation-fill-mode: forwards, forwards;
-        animation-timing-function: ease-in-out, ease-in-out;
-    }
+  @media (max-width: $tablet) and (orientation: portrait) {
+    animation-name: footerFullTablet, footerFullText;
+    animation-duration: 0.4s, 0.3s;
+    animation-delay: 0s, 0.4s;
+    animation-fill-mode: forwards, forwards;
+    animation-timing-function: ease-in-out, ease-in-out;
+  }
 
-    @media (max-width: $mobile) and (orientation: landscape) {
-        animation-name: footerFullMobile, footerFullText;
-        animation-duration: 0.4s, 0.3s;
-        animation-delay: 0s, 0.4s;
-        animation-fill-mode: forwards, forwards;
-        animation-timing-function: ease-in-out, ease-in-out;
-    }
+  @media (max-width: $mobile) and (orientation: landscape) {
+    animation-name: footerFullMobile, footerFullText;
+    animation-duration: 0.4s, 0.3s;
+    animation-delay: 0s, 0.4s;
+    animation-fill-mode: forwards, forwards;
+    animation-timing-function: ease-in-out, ease-in-out;
+  }
 }
 
 // ex 4
 .social-block__toggler {
-    transition: color 0.7s ease-in-out;
+  transition: color 0.7s ease-in-out;
 }
 
 .slider__control:focus {
-    transition: color 0.7s ease-in-out;
+  transition: color 0.7s ease-in-out;
 
-    &::before {
-        transition: border-color 0.7s ease-in-out;
-    }
+  &::before {
+    transition: border-color 0.7s ease-in-out;
+  }
 }
 
-body.slide1-active.with-ui-coloring, body.slide4-active.with-ui-coloring {
-    & .page-header__menu a:hover, .page-header__menu a:focus {
-        color: #a07de4;
+body.slide1-active.with-ui-coloring,
+body.slide4-active.with-ui-coloring {
+  & .page-header__menu a:hover,
+  .page-header__menu a:focus {
+    color: #a07de4;
 
-        &::after {
-            background: #a07de4;
-        }
+    &::after {
+      background: #a07de4;
     }
+  }
 
-    & .social-block__toggler {
-        color: #a67ee5;
+  & .social-block__toggler {
+    color: #a67ee5;
 
-        &:active::before, :focus::before {
-            background-color: #a07de4;
-            border-color: #a07de4;
-        }
+    &:active::before,
+    :focus::before {
+      background-color: #a07de4;
+      border-color: #a07de4;
     }
+  }
 
-    & .social-block--active .social-block__toggler:not(:hover):before {
-        background-color: #a07de4;
-        border-color: #a07de4;
+  & .social-block--active .social-block__toggler:not(:hover)::before {
+    background-color: #a07de4;
+    border-color: #a07de4;
+  }
+
+  & .social-block__link:active,
+  .social-block__link:focus,
+  .social-block__link:hover {
+    color: #a07de4;
+  }
+
+  & .slider__control:active::before,
+  .slider__control:active::before {
+    background-color: #a07de4;
+    border-color: #a07de4;
+  }
+
+  & .slider__control:focus {
+    color: #a07de4;
+
+    &::before {
+      border-color: #a07de4;
     }
-
-    & .social-block__link:active, .social-block__link:focus, .social-block__link:hover {
-        color: #a07de4;
-    }
-
-    & .slider__control:active::before, .slider__control:active::before {
-        background-color: #a07de4;
-        border-color: #a07de4;
-    }
-
-    & .slider__control:focus {
-        color: #a07de4;
-
-        &::before {
-            border-color: #a07de4;
-        }
-    }
+  }
 }
 
 body.slide2-active.with-ui-coloring {
-    & .page-header__menu a:hover, .page-header__menu a:focus {
-        color: #a0ceff;
+  & .page-header__menu a:hover,
+  .page-header__menu a:focus {
+    color: #a0ceff;
 
-        &::after {
-            background: #a0ceff;
-        }
+    &::after {
+      background: #a0ceff;
     }
+  }
 
-    & .social-block__toggler {
-        color: #3e72ee;
+  & .social-block__toggler {
+    color: #3e72ee;
 
-        &:active::before, :focus::before {
-            background-color: #a0ceff;
-            border-color: #a0ceff;
-        }
+    &:active::before,
+    :focus::before {
+      background-color: #a0ceff;
+      border-color: #a0ceff;
     }
+  }
 
-    & .social-block--active .social-block__toggler:not(:hover):before {
-        background-color: #a0ceff;
-        border-color: #a0ceff;
+  & .social-block--active .social-block__toggler:not(:hover)::before {
+    background-color: #a0ceff;
+    border-color: #a0ceff;
+  }
+
+  & .social-block__link:active,
+  .social-block__link:focus,
+  .social-block__link:hover {
+    color: #a0ceff;
+  }
+
+  & .slider__control:active::before,
+  .slider__control:active::before {
+    background-color: #a0ceff;
+    border-color: #a0ceff;
+  }
+
+  & .slider__control:focus {
+    color: #a0ceff;
+
+    &::before {
+      border-color: #a0ceff;
     }
-
-    & .social-block__link:active, .social-block__link:focus, .social-block__link:hover {
-        color: #a0ceff;
-    }
-
-    & .slider__control:active::before, .slider__control:active::before {
-        background-color: #a0ceff;
-        border-color: #a0ceff;
-    }
-
-    & .slider__control:focus {
-        color: #a0ceff;
-
-        &::before {
-            border-color: #a0ceff;
-        }
-    }
+  }
 }
 
 body.slide3-active.with-ui-coloring {
-    & .page-header__menu a:hover, .page-header__menu a:focus {
-        color: #3e72ee;
+  & .page-header__menu a:hover,
+  .page-header__menu a:focus {
+    color: #3e72ee;
 
-        &::after {
-            background: #3e72ee;
-        }
+    &::after {
+      background: #3e72ee;
     }
+  }
 
-    & .social-block__toggler {
-        color: #a7d4ff;
+  & .social-block__toggler {
+    color: #a7d4ff;
 
-        &:active::before, :focus::before {
-            background-color: #3e72ee;
-            border-color: #3e72ee;
-        }
+    &:active::before,
+    :focus::before {
+      background-color: #3e72ee;
+      border-color: #3e72ee;
     }
+  }
 
-    & .social-block--active .social-block__toggler:not(:hover):before {
-        background-color: #3e72ee;
-        border-color: #3e72ee;
+  & .social-block--active .social-block__toggler:not(:hover)::before {
+    background-color: #3e72ee;
+    border-color: #3e72ee;
+  }
+
+  & .social-block__link:active,
+  .social-block__link:focus,
+  .social-block__link:hover {
+    color: #3e72ee;
+  }
+
+  & .slider__control:active::before,
+  .slider__control:active::before {
+    background-color: #3e72ee;
+    border-color: #3e72ee;
+  }
+
+  & .slider__control:focus {
+    color: #3e72ee;
+
+    &::before {
+      border-color: #3e72ee;
     }
-
-    & .social-block__link:active, .social-block__link:focus, .social-block__link:hover {
-        color: #3e72ee;
-    }
-
-    & .slider__control:active::before, .slider__control:active::before {
-        background-color: #3e72ee;
-        border-color: #3e72ee;
-    }
-
-    & .slider__control:focus {
-        color: #3e72ee;
-
-        &::before {
-            border-color: #3e72ee;
-        }
-    }
+  }
 }

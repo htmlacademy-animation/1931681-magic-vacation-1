@@ -17,16 +17,16 @@ export default () => {
         targetEl[0].classList.remove(`screen--hidden`);
 
         setTimeout(() => window.dispatchEvent(new CustomEvent(
-          'animationObjectLoad',
-          { detail: { animationName: showResultEls[i].getAttribute(`data-text-animation`) } }
+            `animationObjectLoad`,
+            {detail: {animationName: showResultEls[i].getAttribute(`data-text-animation`)}}
         )), 300);
 
         const contentAnimation = showResultEls[i].getAttribute(`data-content-animation`);
         if (contentAnimation) {
           window.dispatchEvent(new CustomEvent(
-            'contentAnimation',
-            { detail: { animationName: contentAnimation } }
-          ))
+              `contentAnimation`,
+              {detail: {animationName: contentAnimation}}
+          ));
         }
       });
     }

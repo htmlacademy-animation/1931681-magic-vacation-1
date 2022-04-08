@@ -1,9 +1,10 @@
-import * as THREE from 'three';
+import * as THREE from "three";
 
-function makeSoftMaterial(color) {
-    return new THREE.MeshLambertMaterial({
-        color
-    });
+function makeSoftMaterial(color, side = THREE.FrontSide) {
+  return new THREE.MeshLambertMaterial({
+    color,
+    side
+  });
 }
 
-export { makeSoftMaterial };
+export {makeSoftMaterial};

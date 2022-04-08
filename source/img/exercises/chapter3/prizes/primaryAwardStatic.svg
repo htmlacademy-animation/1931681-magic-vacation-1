@@ -26,7 +26,7 @@
                 <path d="M205,176.09c-28.23,0-56.07,5.76-72.81,10-3.95,1-6,2.66-6.08,4.34A12.93,12.93,0,0,1,132.18,179c16.74-10.5,44.58-24.68,72.81-24.68,44.81,0,73.64,16,73.64,35.75,0,0.12,0,.24,0,0.37-0.37-7.95-29.1-14.37-73.63-14.37" fill="#36e69a" />
                 <path d="M132.18,195.12c16.74,4.27,44.58,10,72.81,10,44.14,0,72.75-6.32,73.6-14.18-0.86,19.34-29.45,34.86-73.6,34.86-28.23,0-56.07-14.19-72.81-24.68a12.88,12.88,0,0,1-6-10.18c0.26,1.61,2.26,3.18,6,4.14" fill="#068e4d" />
 
-                <!-- airplane's middle patch -->  
+                <!-- airplane's middle patch -->
                 <path d="M132.18,186.12c16.74-4.27,44.58-10,72.81-10,44.53,0,73.26,6.43,73.61,14.38,0,0.17,0,.34,0,0.51-0.85,7.86-29.45,14.17-73.6,14.17-28.23,0-56.07-5.76-72.81-10-3.79-1-5.79-2.53-6-4.13l0-.51c0.13-1.69,2.15-3.36,6.1-4.37" fill="#25b774">
                     <animateTransform attributeName="transform" begin="animationStart.begin" end="animationStart.end" type="translate" values="0,-5; 0,0; 0,-5" dur="2s" repeatCount="2" />
                 </path>
@@ -128,7 +128,7 @@
                 <path d="M91.14,327.79a2.2,2.2,0,0,1-2-2.36l13.66-193.17c1.1-15.49-4.8-21.92-8.75-24.47a1.35,1.35,0,0,1,.53-2.45C103,104,122.18,104,120,134.19L106.43,326.67a2.2,2.2,0,0,1-2.35,2Z" fill="#fff"/>
                 <path d="M124.5,328.17a2.2,2.2,0,0,1-2.17-2.23l2.24-193.63c0.19-15.53-6.07-21.61-10.16-23.91a1.35,1.35,0,0,1,.39-2.47c8.36-1.9,27.49-3,27.15,27.28l-2.25,192.93a2.2,2.2,0,0,1-2.22,2.18Z" fill="#fff"/>
             </g>
-            
+
             <!-- window -->
             <path style="stroke-opacity: 0" d="M275,225.43H257.87a17.6,17.6,0,0,1-17.52-17.58V170a17.6,17.6,0,0,1,17.52-17.58H275A17.6,17.6,0,0,1,292.51,170v37.83A17.61,17.61,0,0,1,275,225.43Z" fill="none" stroke="#fff" stroke-width="2" />
 
@@ -138,11 +138,11 @@
                     <line x1="28.18" y1="38.34" x2="91.09" y2="38.34" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" transform="translate(80, 0)">
                         <animateTransform attributeName="transform" begin="animationStart.begin + 2.6s" end="animationStart.end" type="translate" values="80.0 0.0; -100.0 0.0" dur="2s" fill="freeze" />
                     </line>
-                    
+
                     <path d="M41.77,97.54H77.06a12.4,12.4,0,1,1,24.8,0h17.93" transform="translate(50.0 -69.46)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2">
                         <animateTransform attributeName="transform" begin="animationStart.begin + 2.6s" end="animationStart.end" type="translate" values="50.0 -69.46; -150.77 -69.46" dur="2s" fill="freeze" />
                     </path>
-                            
+
                     <g>
                         <animateTransform attributeName="transform" begin="animationStart.begin + 3.5s" end="animationStart.end" type="translate" values="-50.0 0.0; -250.0 0.0" dur="2.4s" fill="freeze" />
                         <animate attributeName="stroke-opacity" begin="animationStart.begin + 4s" end="animationStart.end" dur="1.5s" values="1.0;1.0;0.0" keyTimes="0;0.7;1" fill="freeze" />
@@ -185,7 +185,7 @@
                             <animateTransform attributeName="transform"  begin="animationStart.begin + 2.6s" end="animationStart.end" type="translate" values="-80, 0; 0, 0" dur="0.4s" fill="freeze" />
                             <animate attributeName="stroke-opacity" begin="animationStart.begin + 2.79s" end="animationStart.end" dur="0.5s" values="0.0;1.0;1.0" keyTimes="0;0.06;1" fill="freeze" />
                             <animate attributeName="fill-opacity" begin="animationStart.begin + 2.79s" end="animationStart.end" dur="0.5s" values="0.0;1.0;1.0" keyTimes="0;0.06;1" fill="freeze" />
-                            
+
                             <path d="M79.18,194A131,131,0,0,1,94.77,220.9a255,255,0,0,1-20.08-23.55,259,259,0,0,1-17.07-25.88A131.72,131.72,0,0,1,79.18,194" fill="#36e69a"/>
                             <path d="M80.94,214.39a127.19,127.19,0,0,1,22.8,20.49A242.09,242.09,0,0,1,77.9,219.17a235.86,235.86,0,0,1-23.42-18.7,119.82,119.82,0,0,1,26.46,13.92" fill="#36e69a"/>
                             <path d="M93.66,205.48a258.38,258.38,0,0,0,10.08,29.39,125.63,125.63,0,0,0-4.5-30.52,135.9,135.9,0,0,0-12.06-29.44,260.33,260.33,0,0,0,6.47,30.57" fill="#36e69a"/>

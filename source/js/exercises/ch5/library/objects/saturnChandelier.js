@@ -1,78 +1,82 @@
-import * as THREE from 'three';
+import * as THREE from "three";
 
 import {
-    MetalGreyColor, BrightPurpleColor,
-    ShadowedBrightPurpleColor
-} from '../colors';
-import { makeSoftMaterial } from '../materials/soft';
+  MetalGreyColor, BrightPurpleColor,
+  ShadowedBrightPurpleColor
+} from "../colors";
+import {makeSoftMaterial} from "../materials/soft";
 
 import {
-    makeSaturn,
-    Theme as SaturnTheme
-} from './saturn';
+  makeSaturn,
+  Theme as SaturnTheme
+} from "./saturn";
 
 const Theme = {
-    Regular: 'Regular',
-    Dark: 'Dark'
-}
+  Regular: `Regular`,
+  Dark: `Dark`
+};
+
+const RAD_FACTOR = Math.PI / 180;
 
 function makeStyleInfo(theme) {
-    let sphereColor;
-    let ropeColor = MetalGreyColor;
-    let saturnTheme;
+  let sphereColor;
+  let ropeColor = MetalGreyColor;
+  let saturnTheme;
 
-    switch(theme) {
-        case Theme.Dark:
-            sphereColor = ShadowedBrightPurpleColor;
-            saturnTheme = SaturnTheme.Dark;
-            break;
-        default:
-        case Theme.Regular:
-            sphereColor = BrightPurpleColor;
-            saturnTheme = SaturnTheme.Regular;
-            break;
-    }
+  switch (theme) {
+    case Theme.Dark:
+      sphereColor = ShadowedBrightPurpleColor;
+      saturnTheme = SaturnTheme.Dark;
+      break;
+    default:
+    case Theme.Regular:
+      sphereColor = BrightPurpleColor;
+      saturnTheme = SaturnTheme.Regular;
+      break;
+  }
 
-    return [
-        makeSoftMaterial(sphereColor),
-        makeSoftMaterial(ropeColor),
-        saturnTheme
-    ];
+  return [
+    makeSoftMaterial(sphereColor),
+    makeSoftMaterial(ropeColor),
+    saturnTheme
+  ];
 }
 
 function makeRope(material) {
-    const geometry = new THREE.CylinderGeometry(0.5, 0.5, 250);
+  const geometry = new THREE.CylinderGeometry(0.5, 0.5, 250);
 
-    const rope = new THREE.Mesh(geometry, material);
-    rope.position.set(0, 125, 0);
+  const rope = new THREE.Mesh(geometry, material);
+  rope.position.set(0, 125, 0);
 
-    return rope;
+  return rope;
 }
 
 function makeSphere(material) {
-    const geometry = new THREE.SphereGeometry(3, 15, 15);
+  const geometry = new THREE.SphereGeometry(3, 15, 15);
 
-    const sphere = new THREE.Mesh(geometry, material);
-    sphere.position.set(0, 40, 0);
+  const sphere = new THREE.Mesh(geometry, material);
+  sphere.position.set(0, 40, 0);
 
-    return sphere;
+  return sphere;
 }
 
 function makeSaturnChandelier(theme = Theme.Regular) {
-    const [ sphereMaterial, ropeMaterial, saturnTheme ] = makeStyleInfo(theme);
+  const [sphereMaterial, ropeMaterial, saturnTheme] = makeStyleInfo(theme);
 
-    const saturnChandelier = new THREE.Group();
+  const saturnChandelier = new THREE.Group();
 
-    saturnChandelier.add(makeSaturn(saturnTheme));
-    saturnChandelier.add(makeRope(ropeMaterial));
-    saturnChandelier.add(makeSphere(sphereMaterial));
+  saturnChandelier.add(makeSaturn(saturnTheme));
+  saturnChandelier.add(makeRope(ropeMaterial));
+  saturnChandelier.add(makeSphere(sphereMaterial));
 
-    saturnChandelier.position.set(50, 150, 100);
+  saturnChandelier.scale.set(0.18, 0.18, 0.18);
+  saturnChandelier.position.set(20, 25, 10);
+  saturnChandelier.rotateY(100 * RAD_FACTOR);
 
-    return saturnChandelier;
+  return saturnChandelier;
 }
 
 export {
-    Theme,
-    makeSaturnChandelier
+  Theme,
+  makeSaturnChandelier
 };

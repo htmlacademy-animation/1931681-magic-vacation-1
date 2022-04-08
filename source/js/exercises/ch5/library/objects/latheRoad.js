@@ -1,34 +1,35 @@
-import * as THREE from 'three';
+import * as THREE from "three";
 
-const START_WIDTH = 150;
+const START_WIDTH = 500;
 const RAD_FACTOR = Math.PI / 180;
 
 function makeLatheRoad(
     fromAngle,
     toAngle,
     width,
-    material
+    material,
+    startWidth = START_WIDTH
 ) {
-    var points = [
-        new THREE.Vector2(START_WIDTH, 30.5),
-        new THREE.Vector2(START_WIDTH, 30),
-        new THREE.Vector2(START_WIDTH + width, 30),
-        new THREE.Vector2(START_WIDTH + width, 30.5)
-    ];
+  let points = [
+    new THREE.Vector2(startWidth, 30.5),
+    new THREE.Vector2(startWidth, 30),
+    new THREE.Vector2(startWidth + width, 30),
+    new THREE.Vector2(startWidth + width, 30.5)
+  ];
 
-    const geometry = new THREE.LatheGeometry(
-        points,
-        25,
-        fromAngle * RAD_FACTOR,
-        toAngle * RAD_FACTOR
-    );
-   
-    const latheRoad = new THREE.Mesh(geometry, material);
+  const geometry = new THREE.LatheGeometry(
+      points,
+      50,
+      0,
+      toAngle * RAD_FACTOR
+  );
 
-    latheRoad.rotateX(180 * RAD_FACTOR);
+  const latheRoad = new THREE.Mesh(geometry, material);
 
-    return latheRoad;
+  latheRoad.rotateX(180 * RAD_FACTOR);
+
+  return latheRoad;
 
 }
 
-export { makeLatheRoad };
+export {makeLatheRoad};

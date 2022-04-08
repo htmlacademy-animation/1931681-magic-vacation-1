@@ -1,49 +1,49 @@
-import { scene } from './animation';
+import {scene} from "./animation";
 
 const FPS = 60;
 let FPS_INTERVAL = 1000 / FPS;
 
 function animationTick() {
-    let isActive = true;
+  let isActive = true;
 
-    function animationTickContent(drawCallback) {
-        let start = Date.now();
-        let then = Date.now();
-    
-        function tick(draw) {  
-            if (isActive) {
-                requestAnimationFrame(() => tick(draw));
-            }
-    
-            const now = Date.now();
-            const elapsed = now - then;
-        
-            if (elapsed > FPS_INTERVAL) {
-                then = now - (elapsed % FPS_INTERVAL);
-                draw(now - start);
-            }
-        }
+  function animationTickContent(drawCallback) {
+    let start = Date.now();
+    let then = Date.now();
 
-        tick(drawCallback);
+    function tick(draw) {
+      if (isActive) {
+        requestAnimationFrame(() => tick(draw));
+      }
+
+      const now = Date.now();
+      const elapsed = now - then;
+
+      if (elapsed > FPS_INTERVAL) {
+        then = now - (elapsed % FPS_INTERVAL);
+        draw(now - start);
+      }
     }
 
-    function cancelTimer() {
-        isActive = false;
-    }
+    tick(drawCallback);
+  }
 
-    return {
-        start: (drawCallback) => animationTickContent(drawCallback),
-        stop: cancelTimer
-    };
+  function cancelTimer() {
+    isActive = false;
+  }
+
+  return {
+    start: (drawCallback) => animationTickContent(drawCallback),
+    stop: cancelTimer
+  };
 }
 
 
 function startLossScreenAnimation() {
-    const { start, stop } = animationTick();
+  const {start, stop} = animationTick();
 
-    scene(start);
+  scene(start);
 
-    return stop;
+  return stop;
 }
 
-export { startLossScreenAnimation };
+export {startLossScreenAnimation};

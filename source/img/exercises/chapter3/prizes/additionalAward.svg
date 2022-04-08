@@ -7,7 +7,7 @@
     <path d="M278.74,279.41a5.34,5.34,0,1,0-5.32-5.34,5.32,5.32,0,0,0,5.32,5.34" fill="#a67ee5">
       <set attributeName="d" begin="animationStart.begin + 0.5s" end="animationStart.end" to="M253.93,232.11a5.69,5.69,0,1,0-5.69-5.69,5.69,5.69,0,0,0,5.69,5.69" />
     </path>
-    
+
     <ellipse cx="278.74" cy="274.07" rx="5.31" ry="5.34" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2">
       <set attributeName="cx" begin="animationStart.begin + 0.5s" end="animationStart.end" to="253.93" />
       <set attributeName="cy" begin="animationStart.begin + 0.5s" end="animationStart.end" to="226.42" />
@@ -16,7 +16,7 @@
 
     </ellipse>
 
-    
+
     <path d="M 267 258 H 82.68 a 11.62 11.62 0 0 0 -11.57 11.61 v 19.75 H 279 V 269.66 a 11.62 11.62 0 0 0 -11.56 -11.61" fill="#a67ee5" >
       <set attributeName="d" begin="animationStart.begin + 0.5s" end="animationStart.end" to="M240.3,210.48H67.19a12,12,0,0,0-12,11.9V276a13,13,0,0,0,13,13h184V222.38a12,12,0,0,0-11.94-11.9" />
     </path>
@@ -71,7 +71,7 @@
       <animateTransform attributeName="transform" begin="animationStart.begin + 1.5s" end="animationStart.end" type="rotate" dur="1.5s" values="-10, 284, 184; -30, 284, 184; 0, 284, 184; -10, 284, 184" repeatCount="indefinite" additive="sum" />
 
       <path d="M279.2,183.8A4.89,4.89,0,0,1,283,179h0l21.07-5.4c-7.78,14.84-19.18,15.07-20,15.07h0a4.9,4.9,0,0,1-4.85-4.9" fill="#fff">
-        <animateTransform attributeName="transform" begin="animationStart.begin + 0.5s" end="animationStart.end" type="rotate" dur="0.15s" values="0, 284, 184; -150, 284, 184" repeatCount="indefinite" />  
+        <animateTransform attributeName="transform" begin="animationStart.begin + 0.5s" end="animationStart.end" type="rotate" dur="0.15s" values="0, 284, 184; -150, 284, 184" repeatCount="indefinite" />
       </path>
       <path d="M262.24,169.86l10.76,0a4.65,4.65,0,0,1,4.41-2.9,3.91,3.91,0,0,1,3.48,1.76,13.39,13.39,0,0,1,1.37,2.59c0.63,1.57,4,15.8,5.89,19.16,1.1,2,4.39,7.16,4.39,7.16a2.3,2.3,0,0,1,.31,1.15V208s-3.11-1.08-3.11-3.91v-6.53c-1.91.27-6-1.65-8.33-2.88a12.82,12.82,0,0,1-6.36-6.76,12.33,12.33,0,0,1-.11-9.16,7.13,7.13,0,0,0,.79-2.91c-0.06-1.14-1.39-2.72-2.18-4.05Z" fill="#fff"/>
     </g>

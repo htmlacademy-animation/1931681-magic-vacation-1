@@ -1,17 +1,17 @@
-import * as THREE from 'three';
+import * as THREE from "three";
 
-import { PurpleColor } from '../../../library/colors';
-import { makeBasicMaterial } from '../../../library/materials/basic';
+import {PurpleColor} from "../../../library/colors";
+import {makeBasicMaterial} from "../../../library/materials/basic";
 
 function makeKeyholeBackPlane() {
-    const geometry = new THREE.PlaneGeometry(50, 50);
-    const material = makeBasicMaterial(PurpleColor);
-   
-    const keyholeBackPlane = new THREE.Mesh(geometry, material);
+  const geometry = new THREE.PlaneGeometry(50, 50);
+  const material = makeBasicMaterial(PurpleColor);
 
-    keyholeBackPlane.position.set(0, 0, -10);
+  const keyholeBackPlane = new THREE.Mesh(geometry, material);
 
-    return keyholeBackPlane;
+  keyholeBackPlane.position.set(0, 0, -10);
+
+  return keyholeBackPlane;
 }
 
-export { makeKeyholeBackPlane }; 
+export {makeKeyholeBackPlane};

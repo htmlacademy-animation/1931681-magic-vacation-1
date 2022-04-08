@@ -1,25 +1,25 @@
-import * as THREE from 'three';
+import * as THREE from "three";
 
 import {
-    KEYHOLE_ID,
-    makeSVGExtrudeGeometry
-} from '../../../svg/misc';
-import { DarkPurpleColor, DominantRedColor } from '../../../library/colors';
-import { makeSoftMaterial } from '../../../library/materials/soft';
+  KEYHOLE_ID,
+  makeSVGExtrudeGeometry
+} from "../../../svg/misc";
+import {DarkPurpleColor} from "../../../library/colors";
+import {makeSoftMaterial} from "../../../library/materials/soft";
 
 const RAD_FACTOR = Math.PI / 180;
 
 function makeKeyhole() {
-    const geometry = makeSVGExtrudeGeometry(KEYHOLE_ID);
-    const material = makeSoftMaterial(DarkPurpleColor);
-   
-    const keyhole = new THREE.Mesh(geometry, material);
+  const geometry = makeSVGExtrudeGeometry(KEYHOLE_ID);
+  const material = makeSoftMaterial(DarkPurpleColor);
 
-    keyhole.scale.set(0.1, 0.1, 0.1);
-    keyhole.position.set(-100, 100, 0);
-    keyhole.rotateX(180 * RAD_FACTOR);
+  const keyhole = new THREE.Mesh(geometry, material);
 
-    return keyhole;
+  keyhole.scale.set(0.1, 0.1, 0.1);
+  keyhole.position.set(-100, 100, 0);
+  keyhole.rotateX(180 * RAD_FACTOR);
+
+  return keyhole;
 }
 
-export { makeKeyhole }; 
+export {makeKeyhole};

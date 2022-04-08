@@ -1,56 +1,56 @@
-import * as THREE from 'three';
+import * as THREE from "three";
 
-import { makeLatheRoad } from '../../../../library/objects/latheRoad';
-import { GreyColor, WhiteColor, toVec3 } from '../../../../library/colors';
+import {makeLatheRoad} from "../../../../library/objects/latheRoad";
+import {GreyColor, WhiteColor, toVec3} from "../../../../library/colors";
 
-import fragmentShader from './fragment.frag';
+import fragmentShader from "./fragment.frag";
 
 const RAD_FACTOR = Math.PI / 180;
 
 function makeMaterial() {
-    const lambertShader = THREE.ShaderLib['lambert'];
-    const uniforms = THREE.UniformsUtils.clone(lambertShader.uniforms);
+  const lambertShader = THREE.ShaderLib[`lambert`];
+  const uniforms = THREE.UniformsUtils.clone(lambertShader.uniforms);
 
-    uniforms.stripeSize = {
-        value: 0.1
-    };
-    uniforms.spaceSize = {
-        value: 0.12
-    };
-    uniforms.padStart = {
-        value: 0.05
-    };
-    uniforms.stripeWidth = {
-        value: 0.05
-    };
-    uniforms.firstColor = {
-        value: toVec3(GreyColor)
-    };
-    uniforms.secondColor = {
-        value: toVec3(WhiteColor)
-    };
+  uniforms.stripeSize = {
+    value: 0.1
+  };
+  uniforms.spaceSize = {
+    value: 0.12
+  };
+  uniforms.padStart = {
+    value: 0.05
+  };
+  uniforms.stripeWidth = {
+    value: 0.05
+  };
+  uniforms.firstColor = {
+    value: toVec3(GreyColor)
+  };
+  uniforms.secondColor = {
+    value: toVec3(WhiteColor)
+  };
 
-    const material = new THREE.ShaderMaterial({
-        uniforms: uniforms,
-        vertexShader: lambertShader.vertexShader,
-        fragmentShader,
-        lights: true,
-        defines: {
-            USE_UV: ''
-        }
-    });
+  const material = new THREE.ShaderMaterial({
+    uniforms,
+    vertexShader: lambertShader.vertexShader,
+    fragmentShader,
+    lights: true,
+    defines: {
+      USE_UV: ``
+    }
+  });
 
-    return material;
+  return material;
 }
 
 function makeRoad() {
-    const road = makeLatheRoad(0, 90, 25, makeMaterial());
+  const road = makeLatheRoad(0, 90, 85, makeMaterial());
 
-    road.scale.set(0.2, 0.2, 0.2);
-    road.position.set(0, -1.5, 0);
-    road.rotateY(130 * RAD_FACTOR);
+  road.scale.set(0.076, 0.076, 0.076);
+  road.position.set(0, 2.5, 0);
+  road.rotateY(89.86 * RAD_FACTOR);
 
-    return road;
+  return road;
 }
 
-export { makeRoad };
+export {makeRoad};

@@ -1,160 +1,159 @@
 @keyframes suitcase {
-    from {
-        transform: translateY(35vh) scale(0.06);
-    }
+  from {
+    transform: translateY(35vh) scale(0.06);
+  }
 
-    to {
-        transform: translateY(0) scale(1);
-    }
+  to {
+    transform: translateY(0) scale(1);
+  }
 }
 
 @keyframes flamingo {
-    from {
-        opacity: 0;
-        transform: translateY(30vh);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(30vh);
+  }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes flamingo-rotation {
-    from {
-        transform: translateY(0) rotate(0deg);
-        
-    }
+  from {
+    transform: translateY(0) rotate(0deg);
+  }
 
-    to {
-        transform: translateY(2vh) rotate(-5deg);
-    }
+  to {
+    transform: translateY(2vh) rotate(-5deg);
+  }
 }
 
 @keyframes greenLeaf {
-    from {
-        opacity: 0;
-        transform: translateY(-3vh) rotate(-15deg);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-3vh) rotate(-15deg);
+  }
 
-    20% {
-        opacity: 1;
-        transform: translatey(2.41vh) rotate(12.1deg);
-    }
+  20% {
+    opacity: 1;
+    transform: translateY(2.41vh) rotate(12.1deg);
+  }
 
-    40% {
-        transform: translateY(-1vh) rotate(-5deg);
-    }
+  40% {
+    transform: translateY(-1vh) rotate(-5deg);
+  }
 
-    60% {
-        transform: translateY(0.81vh) rotate(4.1deg);
-    }
+  60% {
+    transform: translateY(0.81vh) rotate(4.1deg);
+  }
 
-    80% {
-        transform: translate(-0.10vh) rotate(-1.3deg);
-    }
+  80% {
+    transform: translateY(-0.1vh) rotate(-1.3deg);
+  }
 
-    to {
-        opacity: 1;
-        transform: translateY(0) rotate(0deg);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+  }
 }
 
 @keyframes blueLeaf1 {
-    from {
-        opacity: 0;
-        transform: translateY(-2.76vh) rotate(-13.5deg);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-2.76vh) rotate(-13.5deg);
+  }
 
-    20% {
-        opacity: 1;
-        transform: translatey(2.22vh) rotate(10.85deg);
-    }
+  20% {
+    opacity: 1;
+    transform: translateY(2.22vh) rotate(10.85deg);
+  }
 
-    40% {
-        transform: translateY(-0.92vh) rotate(-4.5deg);
-    }
+  40% {
+    transform: translateY(-0.92vh) rotate(-4.5deg);
+  }
 
-    60% {
-        transform: translateY(0.75vh) rotate(3.65deg);
-    }
+  60% {
+    transform: translateY(0.75vh) rotate(3.65deg);
+  }
 
-    80% {
-        transform: translate(-0.09vh) rotate(-0.45deg);
-    }
+  80% {
+    transform: translateY(-0.09vh) rotate(-0.45deg);
+  }
 
-    to {
-        opacity: 1;
-        transform: translateY(0) rotate(0deg);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+  }
 }
 
 @keyframes blueLeaf2 {
-    from {
-        opacity: 0;
-        transform: translateY(-2.76vh) rotate(13.5deg);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-2.76vh) rotate(13.5deg);
+  }
 
-    20% {
-        opacity: 1;
-        transform: translatey(2.22vh) rotate(-10.85deg);
-    }
+  20% {
+    opacity: 1;
+    transform: translateY(2.22vh) rotate(-10.85deg);
+  }
 
-    40% {
-        transform: translateY(-0.92vh) rotate(4.5deg);
-    }
+  40% {
+    transform: translateY(-0.92vh) rotate(4.5deg);
+  }
 
-    60% {
-        transform: translateY(0.75vh) rotate(-3.65deg);
-    }
+  60% {
+    transform: translateY(0.75vh) rotate(-3.65deg);
+  }
 
-    80% {
-        transform: translate(-0.09vh) rotate(0.45deg);
-    }
+  80% {
+    transform: translate(-0.09vh) rotate(0.45deg);
+  }
 
-    to {
-        opacity: 1;
-        transform: translateY(0) rotate(0deg);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+  }
 }
 
-#suitcase {
-    animation-name: suitcase;
-    animation-duration: 0.6s;
-    animation-fill-mode: forwards;
-    animation-timing-function: cubic-bezier(0,1.21,.08,1.08);
+.suitcase-animation {
+  animation-name: suitcase;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0, 1.21, 0.08, 1.08);
 }
 
-#flamingo {
-    animation-name: flamingo, flamingo-rotation;
-    animation-duration: 0.6s, 1s;
-    animation-fill-mode: forwards, none;
-    animation-direction: normal, alternate;
-    animation-iteration-count: 1, infinite;
-    animation-delay: 0s, 0.6s;
-    animation-timing-function: cubic-bezier(.34,.76,.14,.89), ease-out;
+.flamingo-animation {
+  animation-name: flamingo, flamingo-rotation;
+  animation-duration: 0.6s, 1s;
+  animation-fill-mode: forwards, none;
+  animation-direction: normal, alternate;
+  animation-iteration-count: 1, infinite;
+  animation-delay: 0s, 0.6s;
+  animation-timing-function: cubic-bezier(0.34, 0.76, 0.14, 0.89), ease-out;
 }
 
-#greenLeaf {
-    animation-name: greenLeaf;
-    animation-duration: 1.7s;
-    animation-fill-mode: forwards;
-    animation-timing-function: linear;
-    animation-delay: 0.2s;
+.greenLeaf-animation {
+  animation-name: greenLeaf;
+  animation-duration: 1.7s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-delay: 0.2s;
 }
 
-#blueLeaf1 {
-    animation-name: blueLeaf1;
-    animation-duration: 1.8s;
-    animation-fill-mode: forwards;
-    animation-timing-function: linear;
-    animation-delay: 0.17s;
+.blueLeaf1-animation {
+  animation-name: blueLeaf1;
+  animation-duration: 1.8s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-delay: 0.17s;
 }
 
-#blueLeaf2 {
-    animation-name: blueLeaf2;
-    animation-duration: 1.8s;
-    animation-fill-mode: forwards;
-    animation-timing-function: linear;
-    animation-delay: 0.185s;
+.blueLeaf2-animation {
+  animation-name: blueLeaf2;
+  animation-duration: 1.8s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-delay: 0.185s;
 }

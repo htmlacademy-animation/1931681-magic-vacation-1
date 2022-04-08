@@ -1,24 +1,24 @@
 @keyframes prizeLead {
-    from {
-        opacity: 0;
-        transform: translateY(5vh);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(5vh);
+  }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .screen--prizes .prizes__lead {
-    animation-name: prizeLead;
-    animation-duration: 0.5s;
-    animation-delay: 0.5s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  animation-name: prizeLead;
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 
-    opacity: 0;
-    transform: translateY(5vh);
+  opacity: 0;
+  transform: translateY(5vh);
 }
 
 .prizes__item--cases .prizes__icon {
@@ -43,19 +43,20 @@
   }
 }
 
-.prizes__item--cases, .prizes__item--codes {
+.prizes__item--cases,
+.prizes__item--codes {
   & .prizes__desc {
     margin-top: 4.2rem;
 
     @media (min-width: $stop-scaling) {
       margin-top: 42px;
     }
-  
+
     @media (max-width: $tablet) and (orientation: portrait) {
       margin-top: 0;
       margin-bottom: -0.38rem;
     }
-  
+
     @media (max-width: $tablet) and (orientation: landscape) {
       margin-top: 1.6rem;
     }
@@ -82,7 +83,6 @@
   animation-timing-function: ease-in-out;
 
   left: calc(50% - 26.2rem);
-
 
   @media (min-width: $stop-scaling) {
     left: calc(50% - 47em);
@@ -115,7 +115,6 @@
   animation-timing-function: linear;
 
   opacity: 0;
-  
 }
 
 @keyframes prizesItemCodesIconMargin {
@@ -148,8 +147,8 @@
   display: block;
 }
 
-#result .result__image img,
-#result3 .result__image img {
-    width: 100%;
-    height: 100%;
+.screen--result1 .result__image img,
+.screen--result3 .result__image img {
+  width: 100%;
+  height: 100%;
 }

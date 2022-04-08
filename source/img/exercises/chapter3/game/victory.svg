@@ -4,7 +4,7 @@
     <g>
         <animateTransform attributeName="transform" begin="animationStart.begin" end="animationStart.end" type="scale" dur="0.5s" values="1.05, 1.05; 1, 1" additive="sum" />
         <animateTransform attributeName="transform" begin="animationStart.begin" end="animationStart.end" type="translate" dur="0.5s" values="-16, -3; 0, 0" additive="sum" />
-        
+
         <!-- П -->
         <path
             d="M 62 24.44 H 16 V 92 H 2.6 V 8 H 62"
@@ -46,7 +46,7 @@
             />
         </path>
         <!-- П -->
-        
+
 
         <!-- О -->
         <path
@@ -276,7 +276,7 @@
                 fill="freeze"
             />
         </path>
-        
+
         <path
             d="M 546.95 92 L 546.95 92 H 533.47 L 525.67 68.48 H 487.87 L 480.07 92 H 463.75"
             transform="translate(-2.1 -1.5)"

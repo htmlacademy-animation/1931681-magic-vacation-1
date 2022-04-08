@@ -1,36 +1,36 @@
 .screen--result .result__form {
-    & .form--result {
-        width: 42.2rem;
-        margin-left: auto;
-        opacity: 0;
+  & .form--result {
+    width: 42.2rem;
+    margin-left: auto;
+    opacity: 0;
 
-        &::placeholder {
-            color: transparent;
-        }
-  
-        @media (min-width: $stop-scaling) {
-            width: 422px;
-        }
-    
-        @media (orientation: portrait) {
-            width: 10rem;
-        }
-        
-        @media (max-width: $tablet) and (orientation: landscape) {
-            width: 20.2rem;
-        }
-        
-        @media (max-width: $mobile) and (orientation: landscape) {
-            width: 10rem;
-        }
+    &::placeholder {
+      color: transparent;
     }
 
-    & .form__button {
-        color: transparent;
-
-        &::before {
-            border-color: transparent;
-            background-color: transparent;
-        }
+    @media (min-width: $stop-scaling) {
+      width: 422px;
     }
+
+    @media (orientation: portrait) {
+      width: 10rem;
+    }
+
+    @media (max-width: $tablet) and (orientation: landscape) {
+      width: 20.2rem;
+    }
+
+    @media (max-width: $mobile) and (orientation: landscape) {
+      width: 10rem;
+    }
+  }
+
+  & .form__button {
+    color: transparent;
+
+    &::before {
+      border-color: transparent;
+      background-color: transparent;
+    }
+  }
 }

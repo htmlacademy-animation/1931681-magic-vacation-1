@@ -1,7 +1,7 @@
 <svg id="animation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660.77 160">
     <animate id="animationStart" begin="indefinite" />
 
-    <g>  
+    <g>
         <!-- Н -->
         <g transform="translate(0, -100)" style="stroke-opacity: 0">
             <animateTransform attributeName="transform" begin="animationStart.begin" end="animationStart.end" type="translate" dur="1s" values="0, -100; 0, 0; 0, -8; 0, 0; 0, -1; 0, 0" keyTimes="0; 0.3; 0.45; 0.6; 0.8; 1" repeatCount="1" fill="freeze" />
@@ -413,7 +413,7 @@
                     to="0"
                     dur="0.5s"
                     fill="freeze"
-                />  
+                />
             </path>
 
             <path
