@@ -1,0 +1,488 @@
+<svg id="animation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660.77 160">
+    <animate id="animationStart" begin="indefinite" />
+
+    <g>
+        <!-- Н -->
+        <g transform="translate(0, -100)" style="stroke-opacity: 0">
+            <animateTransform attributeName="transform" begin="animationStart.begin" end="animationStart.end" type="translate" dur="1s" values="0, -100; 0, 0; 0, -8; 0, 0; 0, -1; 0, 0" keyTimes="0; 0.3; 0.45; 0.6; 0.8; 1" repeatCount="1" fill="freeze" />
+            <set attributeName="stroke-opacity" begin="animationStart.begin" end="animationStart.end" to="1.0" />
+
+            <path
+                d="M2.66,92V8H16.1V42.2H53.3V8H66.74"
+                transform="translate(-2.16 -1.5)"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-dasharray="217"
+                stroke-dashoffset="217"
+            >
+                <animate
+                    begin="animationStart.begin"
+                    end="animationStart.end"
+                    attributeName="stroke-dashoffset"
+                    from="217"
+                    to="0"
+                    dur="0.5s"
+                    fill="freeze"
+                />
+            </path>
+
+            <path
+                d="M66.74,9V92H53.3V58.64H16.1V92H2.66"
+                transform="translate(-2.16 -1.5)"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-dasharray="214"
+                stroke-dashoffset="214"
+            >
+                <animate
+                    begin="animationStart.begin"
+                    end="animationStart.end"
+                    attributeName="stroke-dashoffset"
+                    from="214"
+                    to="0"
+                    dur="0.5s"
+                    fill="freeze"
+                />
+            </path>
+        </g>
+        <!-- Н -->
+
+        <!-- Е -->
+        <g transform="translate(0, -100)" style="stroke-opacity: 0">
+            <animateTransform attributeName="transform" begin="animationStart.begin + 0.05s" end="animationStart.end" type="translate" dur="1s" values="0, -100; 0, 0; 0, -8; 0, 0; 0, -1; 0, 0" keyTimes="0; 0.3; 0.45; 0.6; 0.8; 1" repeatCount="1" fill="freeze"  />
+            <set attributeName="stroke-opacity" begin="animationStart.begin + 0.05s" end="animationStart.end" to="1.0" />
+
+            <path
+                d="M147.62,8V24.44H97V41.6h33.6V58H97V75.56h50.64V92"
+                transform="translate(-2.16 -1.5)"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-dasharray="253"
+                stroke-dashoffset="253"
+            >
+                <animate
+                    begin="animationStart.begin"
+                    end="animationStart.end"
+                    attributeName="stroke-dashoffset"
+                    from="253"
+                    to="0"
+                    dur="0.5s"
+                    fill="freeze"
+                />
+            </path>
+
+            <path
+                d="M147.64,92H83.54V8h64.08"
+                transform="translate(-2.16 -1.5)"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-dasharray="213"
+                stroke-dashoffset="213"
+            >
+                <animate
+                    begin="animationStart.begin"
+                    end="animationStart.end"
+                    attributeName="stroke-dashoffset"
+                    from="213"
+                    to="0"
+                    dur="0.5s"
+                    fill="freeze"
+                />
+            </path>
+        </g>
+        <!-- Е -->
+
+        <!-- У -->
+        <g transform="translate(0, -100)" style="stroke-opacity: 0">
+            <animateTransform attributeName="transform" begin="animationStart.begin + 0.1s" end="animationStart.end" type="translate" dur="1s" values="0, -100; 0, 0; 0, -8; 0, 0; 0, -1; 0, 0" keyTimes="0; 0.3; 0.45; 0.6; 0.8; 1" repeatCount="1" fill="freeze" />
+            <set attributeName="stroke-opacity" begin="animationStart.begin + 0.1s" end="animationStart.end" to="1.0" />
+
+            <path
+                d="M 199.22 8 L 219.74 50.36 L 235.34 8 H 251.78 L 220.78 92"
+                transform="translate(-2.16 -1.5)"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-dasharray="199"
+                stroke-dashoffset="199"
+            >
+                <animate
+                    begin="animationStart.begin"
+                    end="animationStart.end"
+                    attributeName="stroke-dashoffset"
+                    from="199"
+                    to="0"
+                    dur="0.5s"
+                    fill="freeze"
+                />
+            </path>
+
+            <path
+                d="M 220.78 92 H 204.38 L 213.86 66.08 L 185.78 8 H 199.22"
+                transform="translate(-2.16 -1.5)"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-dasharray="222"
+                stroke-dashoffset="222"
+            >
+                <animate
+                    begin="animationStart.begin"
+                    end="animationStart.end"
+                    attributeName="stroke-dashoffset"
+                    from="222"
+                    to="0"
+                    dur="0.5s"
+                    fill="freeze"
+                />
+            </path>
+        </g>
+        <!-- У -->
+
+        <!-- Г -->
+        <g transform="translate(0, -100)" style="stroke-opacity: 0">
+            <animateTransform attributeName="transform" begin="animationStart.begin + 0.15s" end="animationStart.end" type="translate" dur="1s" values="0, -100; 0, 0; 0, -8; 0, 0; 0, -1; 0, 0" keyTimes="0; 0.3; 0.45; 0.6; 0.8; 1" repeatCount="1" fill="freeze" />
+            <set attributeName="stroke-opacity" begin="animationStart.begin + 0.15s" end="animationStart.end" to="1.0" />
+
+            <path
+                d="M 273.74 24.44 V 92 H 260.3 V 8"
+                transform="translate(-2.16 -1.5)"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-dasharray="165"
+                stroke-dashoffset="165"
+            >
+                <animate
+                    begin="animationStart.begin"
+                    end="animationStart.end"
+                    attributeName="stroke-dashoffset"
+                    from="165"
+                    to="0"
+                    dur="0.5s"
+                    fill="freeze"
+                />
+            </path>
+
+            <path
+                d="M 260.3 8 H 310.46 V 24.44 H 273.74 "
+                transform="translate(-2.16 -1.5)"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-dasharray="104"
+                stroke-dashoffset="104"
+            >
+                <animate
+                    begin="animationStart.begin"
+                    end="animationStart.end"
+                    attributeName="stroke-dashoffset"
+                    from="104"
+                    to="0"
+                    dur="0.5s"
+                    fill="freeze"
+                />
+            </path>
+        </g>
+        <!-- Г -->
+
+        <!-- А -->
+        <g transform="translate(0, -100)" style="stroke-opacity: 0">
+            <animateTransform attributeName="transform" begin="animationStart.begin + 0.2s" end="animationStart.end" type="translate" dur="1s" values="0, -100; 0, 0; 0, -8; 0, 0; 0, -1; 0, 0" keyTimes="0; 0.3; 0.45; 0.6; 0.8; 1" repeatCount="1" fill="freeze" />
+            <set attributeName="stroke-opacity" begin="animationStart.begin + 0.2s" end="animationStart.end" to="1.0" />
+
+            <path
+                d="M 307.1 92 L 335.1 8 H 362.22 L 390.3 92"
+                transform="translate(-2.16 -1.5)"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-dasharray="205"
+                stroke-dashoffset="205"
+            >
+                <animate
+                    begin="animationStart.begin"
+                    end="animationStart.end"
+                    attributeName="stroke-dashoffset"
+                    from="205"
+                    to="0"
+                    dur="0.5s"
+                    fill="freeze"
+                />
+            </path>
+
+            <path
+                d="M 390.3 92 H 376.82 L 369 68.48 H 331.2 L 323.42 92 H 307.1"
+                transform="translate(-2.16 -1.5)"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-dasharray="118"
+                stroke-dashoffset="118"
+            >
+                <animate
+                    begin="animationStart.begin"
+                    end="animationStart.end"
+                    attributeName="stroke-dashoffset"
+                    from="118"
+                    to="0"
+                    dur="0.5s"
+                    fill="freeze"
+                />
+            </path>
+
+            <path
+                d="M 363.74 52 L 350.3 11.84 L 336.86 52 H 363.74 Z"
+                transform="translate(-2.16 -1.5)"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-dasharray="112"
+                stroke-dashoffset="112"
+            >
+                <animate
+                    begin="animationStart.begin"
+                    end="animationStart.end"
+                    attributeName="stroke-dashoffset"
+                    from="112"
+                    to="0"
+                    dur="0.5s"
+                    fill="freeze"
+                />
+            </path>
+        </g>
+        <!-- А -->
+
+        <!-- Д -->
+        <g transform="translate(0, -100)" style="stroke-opacity: 0">
+            <animateTransform attributeName="transform" begin="animationStart.begin + 0.25s" end="animationStart.end" type="translate" dur="1s" values="0, -100; 0, 0; 0, -8; 0, 0; 0, -1; 0, 0" keyTimes="0; 0.3; 0.45; 0.6; 0.8; 1" repeatCount="1" fill="freeze" />
+            <set attributeName="stroke-opacity" begin="animationStart.begin + 0.25s" end="animationStart.end" to="1.0" />
+
+            <path
+                d="M 396.38 110.24 V 75.56 H 403.82 C 408.38 70.88 411.62 57.2 412.58 19.56 L 412.94 8 H 461.54"
+                transform="translate(-2.16 -1.5)"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-dasharray="160"
+                stroke-dashoffset="160"
+            >
+                <animate
+                    begin="animationStart.begin"
+                    end="animationStart.end"
+                    attributeName="stroke-dashoffset"
+                    from="160"
+                    to="0"
+                    dur="0.5s"
+                    fill="freeze"
+                />
+            </path>
+
+            <path
+                d="M 461.54 8 V 75.56 H 471.54 V 110.24 H 456.86 V 92 H 411 V 110.24 H 396.38"
+                transform="translate(-2.16 -1.5)"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-dasharray="224"
+                stroke-dashoffset="224"
+            >
+                <animate
+                    begin="animationStart.begin"
+                    end="animationStart.end"
+                    attributeName="stroke-dashoffset"
+                    from="224"
+                    to="0"
+                    dur="0.5s"
+                    fill="freeze"
+                />
+            </path>
+
+            <path
+                d="M 448.1 75.56 V 24.44 H 425.54 V 27.56 C 425.06 50 422.3 65.24 418.34 75.56 H 448.1 Z"
+                transform="translate(-2.16 -1.5)"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-dasharray="156"
+                stroke-dashoffset="156"
+            >
+                <animate
+                    begin="animationStart.begin"
+                    end="animationStart.end"
+                    attributeName="stroke-dashoffset"
+                    from="156"
+                    to="0"
+                    dur="0.5s"
+                    fill="freeze"
+                />
+            </path>
+        </g>
+        <!-- Д -->
+
+        <!-- А -->
+        <g transform="translate(0, -100)" style="stroke-opacity: 0">
+            <animateTransform attributeName="transform" begin="animationStart.begin + 0.3s" end="animationStart.end" type="translate" dur="1s" values="0, -100; 0, 0; 0, -8; 0, 0; 0, -1; 0, 0" keyTimes="0; 0.3; 0.45; 0.6; 0.8; 1" repeatCount="1" fill="freeze" />
+            <set attributeName="stroke-opacity" begin="animationStart.begin + 0.3s" end="animationStart.end" to="1.0" />
+
+            <path
+                d="M 477.74 92 L 505.74 8 H 532.86 L 560.9 92"
+                transform="translate(-2.16 -1.5)"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-dasharray="205"
+                stroke-dashoffset="205"
+            >
+                <animate
+                    begin="animationStart.begin"
+                    end="animationStart.end"
+                    attributeName="stroke-dashoffset"
+                    from="205"
+                    to="0"
+                    dur="0.5s"
+                    fill="freeze"
+                />
+            </path>
+
+            <path
+                d="M 560.9 92 H 547.46 L 539.66 68.48 H 501.86 L 494.06 92 H 477.74"
+                transform="translate(-2.16 -1.5)"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-dasharray="118"
+                stroke-dashoffset="118"
+            >
+                <animate
+                    begin="animationStart.begin"
+                    end="animationStart.end"
+                    attributeName="stroke-dashoffset"
+                    from="118"
+                    to="0"
+                    dur="0.5s"
+                    fill="freeze"
+                />
+            </path>
+
+            <path
+                d="M 534.38 52 L 520.94 11.8 L 507.5 52 H 534.38 Z"
+                transform="translate(-2.16 -1.5)"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-dasharray="118"
+                stroke-dashoffset="118"
+            >
+                <animate
+                    begin="animationStart.begin"
+                    end="animationStart.end"
+                    attributeName="stroke-dashoffset"
+                    from="118"
+                    to="0"
+                    dur="0.5s"
+                    fill="freeze"
+                />
+            </path>
+        </g>
+        <!-- А -->
+
+        <!-- Л -->
+        <g transform="translate(0, -100)" style="stroke-opacity: 0">
+            <animateTransform attributeName="transform" begin="animationStart.begin + 0.35s" end="animationStart.end" type="translate" dur="1s" values="0, -100; 0, 0; 0, -8; 0, 0; 0, -1; 0, 0" keyTimes="0; 0.3; 0.45; 0.6; 0.8; 1" repeatCount="1" fill="freeze" />
+            <set attributeName="stroke-opacity" begin="animationStart.begin + 0.35s" end="animationStart.end" to="1.0" />
+
+            <path
+                d="M 568.7 76.88 A 13.77 13.77 0 0 0 573.7 77.88 C 580.3 77.88 584.14 71.64 585.7 19.56 L 586.22 8 H 632.42 V 92"
+                transform="translate(-2.16 -1.5)"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-dasharray="210"
+                stroke-dashoffset="210"
+            >
+                <animate
+                    begin="animationStart.begin"
+                    end="animationStart.end"
+                    attributeName="stroke-dashoffset"
+                    from="210"
+                    to="0"
+                    dur="0.5s"
+                    fill="freeze"
+                />
+            </path>
+
+            <path
+                d="M 632.42 92 H 619 V 24.44 H 598.82 L 598.7 27.56 C 597.14 81 589 94.4 573.74 94.4 A 28.55 28.55 0 0 1 567.02 93.56 L 568.7 76.88"
+                transform="translate(-2.16 -1.5)"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-dasharray="206"
+                stroke-dashoffset="206"
+            >
+                <animate
+                    begin="animationStart.begin"
+                    end="animationStart.end"
+                    attributeName="stroke-dashoffset"
+                    from="206"
+                    to="0"
+                    dur="0.5s"
+                    fill="freeze"
+                />
+            </path>
+        </g>
+        <!-- Л -->
+
+        <!-- ! -->
+        <g transform="translate(0, -100)" style="stroke-opacity: 0">
+            <animateTransform attributeName="transform" begin="animationStart.begin + 0.4s" end="animationStart.end" type="translate" dur="1s" values="0, -100; 0, 0; 0, -8; 0, 0; 0, -1; 0, 0" keyTimes="0; 0.3; 0.45; 0.6; 0.8; 1" repeatCount="1" fill="freeze" />
+            <set attributeName="stroke-opacity" begin="animationStart.begin + 0.4s" end="animationStart.end" to="1.0" />
+
+            <path
+                d="M 646.1 70.4 L 647.54 2 H 661 L 662.44 70.4 H 646.1 Z"
+                transform="translate(-2.16 -1.5)"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-dasharray="167"
+                stroke-dashoffset="167"
+            >
+                <animate
+                    begin="animationStart.begin"
+                    end="animationStart.end"
+                    attributeName="stroke-dashoffset"
+                    from="167"
+                    to="0"
+                    dur="0.5s"
+                    fill="freeze"
+                />
+            </path>
+
+            <path
+                d="M 654.38 76.76 C 659.18 76.76 662.38 80 662.38 84.92 A 8 8 0 0 1 646.3 84.92 C 646.34 80 649.58 76.76 654.38 76.76 Z"
+                transform="translate(-2.16 -1.5)"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-dasharray="51"
+                stroke-dashoffset="51"
+            >
+                <animate
+                    begin="animationStart.begin"
+                    end="animationStart.end"
+                    attributeName="stroke-dashoffset"
+                    from="51"
+                    to="0"
+                    dur="0.5s"
+                    fill="freeze"
+                />
+            </path>
+        </g>
+        <!-- ! -->
+    </g>
+</svg>
