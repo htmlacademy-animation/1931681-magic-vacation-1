@@ -10,6 +10,9 @@ function makeBottomSphere() {
   const geometry = new THREE.SphereGeometry(75, 24, 15);
 
   const bottomSphere = new THREE.Mesh(geometry, snowMaterial);
+
+  bottomSphere.castShadow = true;
+
   bottomSphere.position.set(0, -50, 0);
 
   return bottomSphere;
@@ -18,10 +21,13 @@ function makeBottomSphere() {
 function makeTopSphere() {
   const geometry = new THREE.SphereGeometry(44, 24, 15);
 
-  const bottomSphere = new THREE.Mesh(geometry, snowMaterial);
-  bottomSphere.position.set(0, 50, 0);
+  const topSphere = new THREE.Mesh(geometry, snowMaterial);
 
-  return bottomSphere;
+  topSphere.castShadow = true;
+
+  topSphere.position.set(0, 50, 0);
+
+  return topSphere;
 }
 
 function makeNose() {
@@ -29,6 +35,9 @@ function makeNose() {
   const material = makeSoftMaterial(OrangeColor);
 
   const nose = new THREE.Mesh(geometry, material);
+
+  nose.castShadow = true;
+
   nose.position.set(50, 55, 0);
   nose.rotateZ(-90 * Math.PI / 180);
 

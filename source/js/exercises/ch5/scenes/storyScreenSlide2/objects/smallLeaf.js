@@ -15,6 +15,8 @@ function makeSmallLeaf() {
 
   const smallLeaf = new THREE.Mesh(geometry, material);
 
+  smallLeaf.castShadow = true;
+
   smallLeaf.scale.set(0.1, 0.08, 0.1);
   smallLeaf.position.set(7.5, 6, 25);
   smallLeaf.rotateX(25 * RAD_FACTOR);

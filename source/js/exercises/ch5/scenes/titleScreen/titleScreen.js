@@ -31,10 +31,13 @@ async function titleScreen() {
 }
 
 const TitleScreenSceneDescription = {
+  ambientLightIntensity: 0.0,
   cameraPosition: new THREE.Vector3(0, 0, 50),
   directionalLightPosition: new THREE.Vector3(-10, 50, 15),
-  pointLight1Position: new THREE.Vector3(-50, -35, 25),
-  pointLight2Position: new THREE.Vector3(60, 0, 100)
+  pointLight1Intensity: 0.3,
+  pointLight1Position: new THREE.Vector3(-50, -35, 200),
+  pointLight2Intensity: 0.7,
+  pointLight2Position: new THREE.Vector3(60, 0, 300)
 };
 
 export {

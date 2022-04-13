@@ -10,6 +10,9 @@ function makePyramid() {
   const material = makeSoftMaterial(BlueColor);
 
   let pyramid = new THREE.Mesh(geometry, material);
+
+  pyramid.castShadow = true;
+
   pyramid.scale.set(0.07, 0.07, 0.07);
   pyramid.position.set(14, 7, 15);
   pyramid.rotateY(45 * RAD_FACTOR);

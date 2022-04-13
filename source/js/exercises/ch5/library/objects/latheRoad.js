@@ -26,6 +26,8 @@ function makeLatheRoad(
 
   const latheRoad = new THREE.Mesh(geometry, material);
 
+  latheRoad.receiveShadow = true;
+
   latheRoad.rotateX(180 * RAD_FACTOR);
 
   return latheRoad;

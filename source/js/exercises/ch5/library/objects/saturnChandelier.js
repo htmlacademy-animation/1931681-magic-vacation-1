@@ -46,6 +46,7 @@ function makeRope(material) {
   const geometry = new THREE.CylinderGeometry(0.5, 0.5, 250);
 
   const rope = new THREE.Mesh(geometry, material);
+
   rope.position.set(0, 125, 0);
 
   return rope;
@@ -55,6 +56,7 @@ function makeSphere(material) {
   const geometry = new THREE.SphereGeometry(3, 15, 15);
 
   const sphere = new THREE.Mesh(geometry, material);
+
   sphere.position.set(0, 40, 0);
 
   return sphere;

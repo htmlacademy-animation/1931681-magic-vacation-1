@@ -15,6 +15,8 @@ function makeBigLeaf() {
 
   const bigLeaf = new THREE.Mesh(geometry, material);
 
+  bigLeaf.castShadow = true;
+
   bigLeaf.scale.set(0.15, 0.17, 0.15);
   bigLeaf.position.set(6, 20, 24);
   bigLeaf.rotateZ(180 * RAD_FACTOR);

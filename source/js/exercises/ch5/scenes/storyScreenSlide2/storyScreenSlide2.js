@@ -24,14 +24,6 @@ async function storyScreenSlide2() {
   };
 }
 
-const StoryScreenSlide2SceneDescription = {
-  cameraPosition: new THREE.Vector3(47, 15, 47),
-  directionalLightPosition: new THREE.Vector3(-24, -1, 347),
-  pointLight1Position: new THREE.Vector3(192, 123, -50),
-  pointLight2Position: new THREE.Vector3(154, 146, 46)
-};
-
 export {
-  storyScreenSlide2,
-  StoryScreenSlide2SceneDescription
+  storyScreenSlide2
 };

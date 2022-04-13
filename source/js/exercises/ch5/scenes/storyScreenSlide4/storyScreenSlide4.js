@@ -6,6 +6,7 @@ import {makeSaturnChandelier} from "./objects/saturnChandelier";
 import {makeCarpet} from "./objects/carpet";
 import {makeSuitcase} from "./objects/suitcase";
 import {makeWallFlower} from "./objects/wallFlower";
+import {makeSonya} from "./objects/sonya";
 
 async function storyScreenSlide4() {
   const group = new THREE.Group();
@@ -16,20 +17,13 @@ async function storyScreenSlide4() {
   group.add(makeCarpet());
   group.add(makeSuitcase());
   group.add(makeWallFlower());
+  group.add(makeSonya());
 
   return function renderScreen() {
     return group;
   };
 }
 
-const StoryScreenSlide4SceneDescription = {
-  cameraPosition: new THREE.Vector3(47, 15, 47),
-  directionalLightPosition: new THREE.Vector3(-50, -50, -50),
-  pointLight1Position: new THREE.Vector3(154, 123, 131),
-  pointLight2Position: new THREE.Vector3(177, 69, 216)
-};
-
 export {
-  StoryScreenSlide4SceneDescription,
   storyScreenSlide4
 };
