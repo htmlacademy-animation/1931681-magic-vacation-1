@@ -14,10 +14,13 @@ function makeLampTop() {
       4
   );
 
-  const lampGlass = new THREE.Mesh(geometry, baseMaterial);
-  lampGlass.position.set(0, 179, 0);
+  const lampTop = new THREE.Mesh(geometry, baseMaterial);
 
-  return lampGlass;
+  lampTop.castShadow = true;
+
+  lampTop.position.set(0, 179, 0);
+
+  return lampTop;
 }
 
 function makeLampGlass() {
@@ -29,6 +32,9 @@ function makeLampGlass() {
   const material = makeSoftMaterial(LightBlueColor);
 
   const lampGlass = new THREE.Mesh(geometry, material);
+
+  lampGlass.castShadow = true;
+
   lampGlass.position.set(0, 147, 0);
 
   return lampGlass;
@@ -42,6 +48,9 @@ function makeLampBottom() {
   );
 
   const lampBottom = new THREE.Mesh(geometry, baseMaterial);
+
+  lampBottom.castShadow = true;
+
   lampBottom.position.set(0, 115, 0);
 
   return lampBottom;
@@ -52,6 +61,8 @@ function makeColumn() {
 
   const column = new THREE.Mesh(geometry, baseMaterial);
 
+  column.castShadow = true;
+
   return column;
 }
 
@@ -59,6 +70,9 @@ function makeBaseSphere() {
   const geometry = new THREE.SphereGeometry(16);
 
   const baseSphere = new THREE.Mesh(geometry, baseMaterial);
+
+  baseSphere.castShadow = true;
+
   baseSphere.position.set(0, -115, 0);
 
   return baseSphere;
@@ -68,6 +82,9 @@ function makeBaseCylinder() {
   const geometry = new THREE.CylinderGeometry(16, 16, 120);
 
   const baseCylinder = new THREE.Mesh(geometry, baseMaterial);
+
+  baseCylinder.castShadow = true;
+
   baseCylinder.position.set(0, -175, 0);
 
   return baseCylinder;
@@ -75,6 +92,8 @@ function makeBaseCylinder() {
 
 function makeStreetLight() {
   const streetLight = new THREE.Group();
+
+  streetLight.castShadow = true;
 
   streetLight.add(makeLampTop());
   streetLight.add(makeLampGlass());

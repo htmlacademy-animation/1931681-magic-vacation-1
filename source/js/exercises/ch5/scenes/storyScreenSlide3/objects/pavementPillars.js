@@ -20,6 +20,8 @@ function makePillar(angle) {
 
   const pillar = new THREE.Mesh(geometry, material);
 
+  pillar.castShadow = true;
+
   const radAngle = RAD_FACTOR * angle;
   const xPos = PAVEMENT_RADIUS * Math.cos(radAngle);
   const yPos = PAVEMENT_RADIUS * Math.sin(radAngle);

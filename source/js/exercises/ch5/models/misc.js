@@ -8,6 +8,9 @@ const SCENE_WALLS = `sceneWalls`;
 
 const WATERMELON_ID = `watermelon`;
 const SUITCASE_ID = `suitcase`;
+const DOG_ID = `dog`;
+const COMPASS_ID = `compass`;
+const SONYA_ID = `sonya`;
 
 const SCENE1_CONTENT = `scene1Content`;
 const SCENE2_CONTENT = `scene2Content`;
@@ -16,7 +19,7 @@ const SCENE4_CONTENT = `scene4Content`;
 
 const AllModels = [
   AIRPLANE_ID, SCENE_WALLS,
-  WATERMELON_ID, SUITCASE_ID,
+  WATERMELON_ID, SUITCASE_ID, DOG_ID, COMPASS_ID, SONYA_ID,
   SCENE1_CONTENT, SCENE2_CONTENT, SCENE3_CONTENT, SCENE4_CONTENT
 ];
 
@@ -39,6 +42,21 @@ const ModelsPool = {
   },
   [SUITCASE_ID]: {
     path: `3d/module-6/scene-0-objects/suitcase.gltf`,
+    type: ObjectTypes.GLTF,
+    definition: null
+  },
+  [DOG_ID]: {
+    path: `3d/module-6/rooms-scenes/objects/dog.gltf`,
+    type: ObjectTypes.GLTF,
+    definition: null
+  },
+  [COMPASS_ID]: {
+    path: `3d/module-6/rooms-scenes/objects/compass.gltf`,
+    type: ObjectTypes.GLTF,
+    definition: null
+  },
+  [SONYA_ID]: {
+    path: `3d/module-6/rooms-scenes/objects/sonya.gltf`,
     type: ObjectTypes.GLTF,
     definition: null
   },
@@ -71,7 +89,7 @@ function setModelDefinition(modelId, definition) {
 
 export {
   AIRPLANE_ID, SCENE_WALLS,
-  WATERMELON_ID, SUITCASE_ID,
+  WATERMELON_ID, SUITCASE_ID, DOG_ID, COMPASS_ID, SONYA_ID,
   SCENE1_CONTENT, SCENE2_CONTENT, SCENE3_CONTENT, SCENE4_CONTENT,
   AllModels,
   ObjectTypes,

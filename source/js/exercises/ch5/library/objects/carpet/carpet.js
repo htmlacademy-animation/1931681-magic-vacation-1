@@ -8,8 +8,8 @@ import fragmentShader from "./fragment.frag";
 const RAD_FACTOR = Math.PI / 180;
 
 function makeMaterial(color1, color2) {
-  const lambertShader = THREE.ShaderLib[`lambert`];
-  const uniforms = THREE.UniformsUtils.clone(lambertShader.uniforms);
+  const phongShader = THREE.ShaderLib[`phong`];
+  const uniforms = THREE.UniformsUtils.clone(phongShader.uniforms);
 
   uniforms.density = {
     value: 7
@@ -23,7 +23,7 @@ function makeMaterial(color1, color2) {
 
   const material = new THREE.ShaderMaterial({
     uniforms,
-    vertexShader: lambertShader.vertexShader,
+    vertexShader: phongShader.vertexShader,
     fragmentShader,
     lights: true,
     defines: {
